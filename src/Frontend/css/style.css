@@ -1,5 +1,69 @@
-.sidebar{
-    background-color: aqua;
+html, body{
     height: 100%;
 }
 
+.corpo{
+    background-color: #C4C4C4;
+}
+.sidebar{
+    width: 8.22%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.sidebar a svg{
+    margin-top: 25%;
+    width: 22px;
+    height: 22px;
+    color: #000000;
+}
+
+.sidebar a img{
+    margin-top: 25%;
+    width: 22px;
+    height: 22px;
+}
+
+.sidebar a{
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 55px;
+    height: 55px;
+}
+
+.sidebar a svg:hover{
+    color: #0370AB;
+    background-color: #EEFBFF;
+}
+.sidebar a:hover{
+    color: #0370AB;
+
+    background-color: #EEFBFF;
+    border-radius: 100%;
+}
+
+.sidebar a{
+    border-radius: 100%;
+}
+
+nav div{
+    position: relative;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 33% auto auto auto;
+}
+
+#divLogo{
+    position: static;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#logo{
+    width: 80px;
+    height: 91px;
+}
