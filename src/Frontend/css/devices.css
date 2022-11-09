@@ -1,14 +1,13 @@
 html, body{
     height: 100%;
-    background-color: black;
 }
 
 .navbar{
     position: absolute;
-    height: 127px;
+    height: 80px;
     margin-left: 100px;
     top: 0px;
-    background: rgb(255, 6, 6);
+    background: #ffffff;
 }
 .sidebar{
     width: 8.22%;
