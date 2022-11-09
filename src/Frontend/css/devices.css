@@ -1,12 +1,15 @@
 html, body{
     height: 100%;
+    background-color: black;
 }
 
-.corpo{
-    background-color: #F6F7F4;
-    position: fixed;
+.navbar{
+    position: absolute;
+    height: 127px;
+    margin-left: 100px;
+    top: 0px;
+    background: rgb(255, 6, 6);
 }
-
 .sidebar{
     width: 8.22%;
     height: 100%;
