@@ -2,9 +2,6 @@ html, body{
     height: 100%;
 }
 
-.corpo{
-    background-color: #F6F7F4;
-}
 .sidebar{
     width: 8.22%;
     height: 100%;
@@ -107,3 +104,4 @@ nav div{
     margin-top: 30px;
     margin-left: 60px;
 }
+
