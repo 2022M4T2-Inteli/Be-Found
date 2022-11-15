@@ -1,68 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 html, body{
     height: 100%;
 }
 
 /* * -------login page--------*/
+#person-icon{
+    position:relative;
+    /* trazer p frente */
+    z-index: 2;
+    padding-top: 20px;
+}
+
 #backgroundlogin{
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #F6F7FA, #cfd0d1);
+    background: linear-gradient(135deg, #F6F7FA 70%, #E6EDEF);
     height: 100vh;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    z-index: -1;
 }
 
 .logincenter{
+    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 
-    opacity: 0.8;
-    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
+    /* filter: drop-shadow(0px 4px 80px rgba(0, 0, 0, 0.1)); */
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 480px;
 
-    width: 500px;
-
-    background: rgba(246, 247, 250, 0.75);
-    backdrop-filter: blur(15px);
+    background: #f6f7fa2f;
+    backdrop-filter: blur(5px);
 
     border-radius: 40px;
+    padding-bottom: 20px;
+    
 }
 
 .logincenter h1{
     text-align: center;
+    padding: 70px 0 30px 0;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#h7dont{
+    text-align: center;
     padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
+    font-size: 12px;
 
 }
 
 .logincenter form{
-    padding: 0 40px;
+    padding: 0 75px;
     box-sizing: border-box;
+
 }
 
 form .txt_field{
     position: relative;
-    border-bottom: 2px solid #adadad;
     margin: 30px 0;
+    width: 100%;
+    height: 30px;
+
+    background: white;
+    border-radius: 4px;
 }
 
 .txt_field input{
     width: 100%;
     padding: 0 5px;
     height: 40px;
-    font-size: 16px;
+    font-size: 12px;
     border: none;
     background: none;
     outline: none;
+    /* margin: 0px 20px 20px 0px; */
+}
+
+form .txt_field:hover{
+    background: #a6a6a61f;
 }
 
 .txt_field label{
     position: absolute;
-    top: 50%;
+    top: 95%;
     left: 5px;
-    color: #adadad;
+    color: #000000;
     transform: translateY(-50px);
-    font-size: 16px;
+    font-size: 12px;
     pointer-events:none;
 }
 
@@ -73,13 +104,14 @@ form .txt_field{
     left: 0;
     width: 100%;
     height: 2px;
-    
 }
 
 .pass{
-    margin: -5px 0 20px 5px;
+    margin: -25px 0px 35px 0px;
     color: #a6a6a6;
     cursor: pointer;
+    font-size: 12px;
+    width:fit-content;
 }
 
 .pass:hover{
@@ -88,7 +120,7 @@ form .txt_field{
 
 .loginbutton{
     width: 100%;
-    height: 35px;
+    height: 30px;
     left: 0px;
     top: 71px;
     background: #01939F;
@@ -98,27 +130,28 @@ form .txt_field{
     font-weight: 600;
     cursor: pointer;
     outline: none;
+    font-size: 14px;
 }
 
 .loginbutton:hover{
     border-color: #015E66;
     background:#015E66 ;
     transition: .10s;
-
 }
 
 #requestacess{
-    height: 35px;
+    height: 30px;
     left: 0px;
     top: 71px;
     background: #ffffff;
     border-radius: 20px;
     border: 1px;
     color: black;
-    font-weight: 400;
+    font-weight: ;
     cursor: pointer;
     outline: none;
-    width: 145px;
+    width: 120px;
+    font-size: 12px;
 }
 
 #requestacess:hover{
@@ -127,29 +160,50 @@ form .txt_field{
     transition: .10s;
 }
 
-
-/* LOGIN PAGE */
-#loginRectangle{
-    position: absolute;
-    width: 641px;
-    height: 835px;
-    left: 640px;
-    top: 123px;
-
-    opacity: 0.8;
-    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
-}
-
-
-/* --------INPUTS---------- */
-
-.rectangleInput{
-    position: absolute;
-    width: 320px;
-    height: 55px;
-    left: calc(50% - 320px/2 - 368px);
-    top: calc(50% - 55px/2 - 163.5px);
-
-    background: #F2F2F2;
-    border-radius: 4px;
-}
+/* ----------------ONDAS---------------- */
+.waves {
+    z-index:0;
+    position:relative;
+    width: 100%;
+    height:180vh;
+    margin-bottom:-810px;
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
