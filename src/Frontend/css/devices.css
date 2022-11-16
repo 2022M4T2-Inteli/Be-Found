@@ -206,8 +206,7 @@ nav div{
 
 /* electronic devices side list */
 .deviceList{
-    display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     background-color: white;
     margin-left: 105px;
     width: 320px;
