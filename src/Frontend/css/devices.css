@@ -114,18 +114,192 @@ nav div{
     margin-top: 30px;
     margin-left: 60px;
 }
-
-.fileira{
+.filterFurniture{
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
+    margin-right: 39px;
     margin-left: 110px;
-    margin-top: 70px;
+    margin-top: 10px;
+    padding-bottom: 10px;
 }
 
-.cardfurnite {
+.filterFurniture h5{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.filterButton{
+    border: none;
+    background-color: #F6F7FA;
+}
+
+/* COMEÇAAAAAAAAAAA */
+
+.custom-select {
+    font-family: Arial;
     display: flex;
-    background-color: violet;
+    justify-content: end;
+    margin-right: 45px;
+}
+/* TERMINAAAAAAAA */
+.rowFurniture{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 110px;
+}
+
+.rowFurnitureDown{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 110px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.furnitureCard {
+    justify-content: center;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+    width: 340px;
+    height: 210px;
+    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
+    padding-bottom: 230px;
+}
+
+.cardImage{
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.contentCard {
+    display: table-column-group;
+    justify-content: center;
+    
+}
+
+.contentCard h4{
+    display: flex;
+    justify-content: center;
+}
+
+/*Chair specific properties*/
+.chairImage{
+    display: flex;
+    margin-left: 25px;
+    width: 85%;
+}
+
+/*card image properties*/
+.furnitureImage{
+    display: flex;
+    width: 55%;
+    margin-left: 80px;
+}
+
+/*violin specific properties*/
+.violinImage{
+    display: flex;
+    width: 30%;
+    margin-left: 120px;
+}
+
+/* electronic devices side list */
+.deviceList{
+    display: flex;
+    /* justify-content: space-evenly; */
+    background-color: white;
+    margin-left: 105px;
+    width: 320px;
+    height: 100%;
+}
+
+/* electronic devices top list */
+.topList {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* top list of electronic devices, paragraphs specifically */
+.topList p {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+/* active location number background */
+.activeLocations{
+    margin-top: 17px;
+    margin-right: 10px;
+    width: 58px;
+    height: 22px;
+    left: 321px;
+    top: 156px;
+    background: #F9F6FD;
+    border-radius: 100px;
+}
+
+/* icons electronic devices top list */
+.iconsTopList{
+    padding-top: 13px;
+    padding-right: 5px;
+}
+
+/* electronic devices listed specifically */
+.devices{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+/* name and update of electronic devices */
+.textDevices{
+    display: table-column;
+    padding-top: 15px;
+}
+
+/* name and update of electronic devices, paragraphs specifically */
+.textDevices p{
+    font-family: 'Inter';font-size: 12px;
+}
+
+/* electronic device category */
+.deviceCategory{
+    box-sizing: border-box;
+    width: 76px;
+    height: 19px;
+    left: 505px;
+    top: 234px;
+    background: #231F20;
+    border: 1px solid #231F20;
+    border-radius: 100px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+/* electronic device category, paragraphs specifically*/
+.deviceCategory p{
+    color: white;
+}
+
+/* device list status ball */
+.svgCircle{
+    align-items: center;
+}
+
+/* device list map icon */
+.mapPin{
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.devicesPages{
+    background-color: blueviolet;
     width: 100px;
     height: 100px;
-    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
+    margin-left: 1000px;
+    /* margin-top: 10px; */
+
 }
