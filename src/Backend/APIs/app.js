@@ -42,6 +42,17 @@ const RfRoutes = require('./routes/LocationRfRouter.js');
 app.use('/rfid', RfRoutes);
 
 
+const cors = require("cors");
+app.use(
+	cors({
+		// accept vercel
+		// origin: "https://projeto3-client.vercel.app/",
+
+		// accept any request from any origin
+		origin: "*",
+	})
+);
+
 //Host and db connect
 
 mongoose

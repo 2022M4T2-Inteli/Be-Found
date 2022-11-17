@@ -73,6 +73,17 @@ router.patch('/:id', async (req, res) => {
 })
 
 
-// router.delete('/:id', async ())
+router.delete('/del-all', async (req, res) => {
+    try {
+        const deleteLoc = await locationRf.deleteMany()
+        if (deleteLoc.deletedCount === 0) {
+            res.status(424).json({ msg: 'Não encontrado' })
+            return
+        }
+        res.status(200).json({ msg: 'Deletado com sucesso' })
+    } catch (error) {
+        res.status(500).json({ error: error })
+    }
+})
 
 module.exports = router;
