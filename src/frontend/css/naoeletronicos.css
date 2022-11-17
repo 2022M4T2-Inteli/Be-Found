@@ -1,17 +1,41 @@
+
+#objetos{
+    border: 3px solid #bdbbbb;
+    border-radius: 10px;
+
+}
+
 .botao{
     transform: rotate(180deg);
 }
 
 .activeImg img{
     display: flex;
-    width: 23%;
-    margin-left: 100px;
-}
-.activeImg img{
-    display: inline;
+    width: 70%;
+    margin-left: 20%;
+ 
 }
 
-#objetos h5{
+
+.teste1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    display: inline;
+}
+
+.teste1 h5{
+    padding-right: 5vh;
+}
+
+.rowOne{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.rowTwo{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 }
