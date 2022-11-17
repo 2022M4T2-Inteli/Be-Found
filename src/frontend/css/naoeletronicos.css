@@ -1,0 +1,17 @@
+.botao{
+    transform: rotate(180deg);
+}
+
+.activeImg img{
+    display: flex;
+    width: 23%;
+    margin-left: 100px;
+}
+.activeImg img{
+    display: inline;
+}
+
+#objetos h5{
+    text-align: center;
+    display: inline;
+}

@@ -4,7 +4,6 @@ html, body{
     height: 100%;
 }
 
-/* * -------login page--------*/
 #person-icon{
     position:relative;
     /* trazer p frente */
@@ -63,120 +62,127 @@ html, body{
 }
 
 form .txt_field{
-    position: relative;
-    margin: 30px 0;
-    width: 100%;
-    height: 30px;
+  position: relative;
+  margin: 30px 0;
+  width: 100%;
+  height: 30px;
 
-    background: white;
-    border-radius: 4px;
+  background: white;
+  border-radius: 4px;
 }
 
 .txt_field input{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 12px;
-    border: none;
-    background: none;
-    outline: none;
-    /* margin: 0px 20px 20px 0px; */
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 12px;
+  border: none;
+  background: none;
+  outline: none;
+  /* margin: 0px 20px 20px 0px; */
 }
 
 form .txt_field:hover{
-    background: #a6a6a61f;
+  background: #a6a6a61f;
 }
 
 .txt_field label{
-    position: absolute;
-    top: 95%;
-    left: 5px;
-    color: #000000;
-    transform: translateY(-50px);
-    font-size: 12px;
-    pointer-events:none;
+  position: absolute;
+  top: 95%;
+  left: 5px;
+  color: #000000;
+  transform: translateY(-50px);
+  font-size: 12px;
+  pointer-events:none;
+}
+.txt_field input::placeholder{
+  color: #a6a6a6;
+
 }
 
 .txt_field span::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    height: 2px;
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
 }
 
 .pass{
-    margin: -25px 0px 35px 0px;
-    color: #a6a6a6;
-    cursor: pointer;
-    font-size: 12px;
-    width:fit-content;
+  margin: -25px 0px 35px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+  font-size: 12px;
+  width:fit-content;
 }
 
 .pass:hover{
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .loginbutton{
-    width: 100%;
-    height: 30px;
-    left: 0px;
-    top: 71px;
-    background: #01939F;
-    border-radius: 8px;
-    border: 1px;
-    color: #ffffff;
-    font-weight: 600;
-    cursor: pointer;
-    outline: none;
-    font-size: 14px;
+  width: 100%;
+  height: 30px;
+  left: 0px;
+  top: 71px;
+  background: #01939F;
+  border-radius: 8px;
+  border: 1px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
 }
 
 .loginbutton:hover{
-    border-color: #015E66;
-    background:#015E66 ;
-    transition: .10s;
+  border-color: #015E66;
+  background:#015E66 ;
+  transition: .10s;
 }
 
 #requestacess{
-    height: 30px;
-    left: 0px;
-    top: 71px;
-    background: #ffffff;
-    border-radius: 20px;
-    border: 1px;
-    color: black;
-    cursor: pointer;
-    outline: none;
-    width: 120px;
-    font-size: 12px;
+  height: 30px;
+  left: 0px;
+  top: 71px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px;
+  color: black;
+  cursor: pointer;
+  outline: none;
+  width: 120px;
+  font-size: 12px;
 }
 
 #requestacess:hover{
-    border-color: #E0E0E0;
-    background:#E0E0E0 ;
-    transition: .10s;
+  border-color: #E0E0E0;
+  background:#E0E0E0 ;
+  transition: .10s;
 }
+
 
 /* ----------------ONDAS---------------- */
 .waves {
+ 
     z-index:0;
     position:relative;
     width: 100%;
     height:180vh;
-    margin-bottom:-810px;
     min-height:100px;
     max-height:150px;
   }
-  
-  .content {
-    position:relative;
-    height:20vh;
-    text-align:center;
-    background-color: white;
+
+  .base_onda{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
   }
   
+
   /* Animation */
   
   .parallax > use {
@@ -206,9 +212,31 @@ form .txt_field:hover{
       transform: translate3d(85px,0,0);
     }
   }
+/* -----------request page------------ */
+.requestbutton{
+  width: 252px;
+  height: 30px;
+  left: 0px;
+  top: 71px;
+  background: #01939F;
+  border-radius: 8px;
+  border: 1px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+}
+
+.requestbutton:hover{
+  border-color: #015E66;
+  background:#015E66 ;
+  transition: .10s;
+}
 
   /* ----------pop up---------- */
   .overlay {
+    z-index:2;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -225,35 +253,58 @@ form .txt_field:hover{
   }
   
   .popup {
-    margin: 70px auto;
-    padding: 20px;
+    
+    margin: auto;
+    padding: 2px;
     background: #fff;
-    border-radius: 5px;
-    width: 30%;
+    border-radius: 8px;
+    width: 40%;
+    height: 38%;
     position: relative;
-    transition: all 5s ease-in-out;
+    transition: all 3s ease-in-out;
+    vertical-align:super;
+    
   }
   
   .popup h3 {
-    margin-top: 0;
-    color: #333;
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
     font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    /* font-weight:normal; */
   }
   .popup .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 5px;
+    right: 20px;
     transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 25px;
+    /* font-weight: bold; */
     text-decoration: none;
-    color: #333;
+    color: rgb(0, 0, 0);
   }
   .popup .close:hover {
-    color: #06D85F;
+    color: #01939F;
   }
   .popup .content {
-    max-height: 30%;
+    align-content: center;
+    text-align: center;
+    /* max-height: 30%; */
     overflow: auto;
+    position: relative;
+    height:20vh;
+    text-align:center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
   }
   
+  .popup .content h4{
+    font-size: 16px;
+  }
+  
+  #envelopeicon{
+    position:relative;
+    padding-top: 30px;
+    /* padding-bottom: 30px; */
+  }
