@@ -7,8 +7,12 @@ router.post('/', async (req, res) => {
 
     const { modelo, localizacao, rec, data } = req.body;
     const location = { modelo, localizacao, rec, data };
+    console.log(req.body);
 
     try {
+        // if(!modelo){
+        //     return
+        // }
         await locationRf.create(location);
         res.status(201).json({ msg: "dado enviado com sucesso" });
 

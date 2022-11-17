@@ -8,8 +8,8 @@ const app = express();
 const mongoose = require('mongoose');
 
 //Ports
-const PORT = 3000;
-const hostname = '127.0.0.1';
+const PORT = 5500;
+const hostname = '127.0.0.1:';
 
 //leitura json
 app.use(
@@ -23,15 +23,19 @@ app.use(express.json())
 
 
 //endpoit inicial
-app.get('/' , (req,res) => {
-    res.json({
-        "msg":"oioioi"
-    })
-})
+// app.get('/' , (req,res) => {
+//     res.json({
+//         "msg":"oioioi"
+//     })
+// })
 
 
 
 // rotas API
+app.use(express.static("../../Frontend"));
+const RouterFront = require('./routes/routesFront.js');
+app.use('/', RouterFront);
+
 
 // /rfid
 const RfRoutes = require('./routes/LocationRfRouter.js');
@@ -47,8 +51,8 @@ mongoose
     .then(
         ()=>{
             console.log("Conectado ao banco")
-            app.listen(PORT, hostname, () => {
-                console.log(`Page server running at http://${hostname}:${PORT}/`);
+            app.listen(PORT, () => {
+                console.log(`Page server running at http://${hostname}${PORT}/`);
               });
         }
     )
