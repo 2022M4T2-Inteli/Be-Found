@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devices</title>
     <link rel="stylesheet" href="../css/stylepags.css">
-    
-    
 </head>
 <body>
     <div class="containerr">
         <aside id="sideBar">Side Bar</aside>
         <section class="deviceStatus" id="titleDevices">
             <div class="cardStatusDevice">
-                <div class="imgInfo">
+                <div id="lastLocation" class="imgInfo">
                     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="#D5FFD5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15.875 26C15.993 25.8426 16.1783 25.75 16.375 25.75H19.5C19.8452 25.75 20.125 26.0298 20.125 26.375C20.125 26.7202 19.8452 27 19.5 27H16.6875L13.875 30.75H30.125L27.3125 27H24.5C24.1548 27 23.875 26.7202 23.875 26.375C23.875 26.0298 24.1548 25.75 24.5 25.75H27.625C27.8217 25.75 28.007 25.8426 28.125 26L31.875 31C32.017 31.1894 32.0399 31.4428 31.934 31.6545C31.8281 31.8662 31.6117 32 31.375 32H12.625C12.3883 32 12.1719 31.8662 12.066 31.6545C11.9601 31.4428 11.983 31.1894 12.125 31L15.875 26Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M22 13.25C19.9289 13.25 18.25 14.9289 18.25 17C18.25 19.0711 19.9289 20.75 22 20.75C24.0711 20.75 25.75 19.0711 25.75 17C25.75 14.9289 24.0711 13.25 22 13.25ZM17 17C17 14.2386 19.2386 12 22 12C24.7614 12 27 14.2386 27 17C27 19.5498 25.0914 21.6538 22.625 21.9613V28.875C22.625 29.2202 22.3452 29.5 22 29.5C21.6548 29.5 21.375 29.2202 21.375 28.875V21.9613C18.9086 21.6538 17 19.5498 17 17Z" fill="black"/></svg>
                     <p class="spaceTextDevice">Localização atual:</p>
-                    <p class="lastInfoDev">Sala 10</p>
+                    <!-- <p class="lastInfoDev">Sala 10</p> -->
                 </div>
             </div>
             <div class="cardStatusDevice">
@@ -65,7 +63,7 @@
             </div>
             <hr>
             <div id="geralDevices" class="geralDevices">
-                <div class="devices">
+                <!-- <div class="devices">
                     <div class="textDevices">
                         <svg class="svgCircle" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14" height="14" rx="7" fill="#19B69B"/></svg>
                         <p><b>DSK0032</b><br>Atualizado a 5 minutos</p>
@@ -154,7 +152,7 @@
                         <img class="mapPin" src="../imagens/map-pin.svg" alt="map_pin">
                         <p class="textCategory">Desktop</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <section id="info">
@@ -194,6 +192,7 @@
             </div>
         </section>
     </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../js/eletronicDevices.js"></script>
 </body>
 </html>
