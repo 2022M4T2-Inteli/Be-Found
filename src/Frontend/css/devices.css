@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html, body{
     height: 100%;
 }
@@ -227,12 +228,12 @@ nav div{
 
 /* active location number background */
 .activeLocations{
+    /* position: absolute; */
+    z-index: 1;
     margin-top: 17px;
-    margin-right: 10px;
+    margin-left: 150px;
     width: 58px;
     height: 22px;
-    left: 321px;
-    top: 156px;
     background: #F9F6FD;
     border-radius: 100px;
 }
@@ -266,6 +267,7 @@ nav div{
 
 /* electronic device category */
 .deviceCategory{
+    display: flex;
     box-sizing: border-box;
     width: 76px;
     height: 19px;
@@ -280,6 +282,8 @@ nav div{
 
 /* electronic device category, paragraphs specifically*/
 .deviceCategory p{
+    margin-left: 5px;
+    margin-bottom: 5px;
     color: white;
 }
 
@@ -294,11 +298,48 @@ nav div{
     justify-content: end;
 }
 
-.devicesPages{
+.div2{
+    left: 0;
     background-color: blueviolet;
     width: 100px;
     height: 100px;
     margin-left: 1000px;
-    /* margin-top: 10px; */
-
 }
+
+
+.buttonFilter{
+    background-color: #F6F7FA;
+    border: none;
+}
+
+.dropdown{
+    padding-top: 6px;
+}
+.dropdown button{
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown h5{
+    font-family: 'Inter', sans-serif ;font-size: 14px;
+    text-align: center;
+    color: #0370AB;
+}
+
+.dropdown-menu button{
+    font-family: 'Inter', sans-serif ;font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+.dropdown-menu button:hover{
+    color: #0370AB;
+    font-weight: bold;
+}
+
+.dropdown-menu button:focus{
+    color: white;
+    font-weight: bold;
+}
+
+
