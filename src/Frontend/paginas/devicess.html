@@ -11,8 +11,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: #F6F7FA;">
-    <div class="navbar">
-    </div>
+    <nav class="nav justify-content" id="navbar">
+        <h6 id="nomeMapa">Mapa</h6>
+        <svg id="iconeMapa" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-map" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
+        </svg>
+        <h6 id="nomePerfil">Laís Carvalho</h6>
+        <img id="fotoPerfil" src="../imagens/fotoPerfil.png">
+        <svg id="iconeSeta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+        </svg>
+    </nav>
     <nav class="nav sidebar">
         <div id="divLogo">
             <img id="logo" src="../imagens/logo.png">
@@ -27,7 +40,7 @@
                         d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
                 </svg>
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/eletronicDevices">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop"
                     viewBox="0 0 16 16">
                     <path
