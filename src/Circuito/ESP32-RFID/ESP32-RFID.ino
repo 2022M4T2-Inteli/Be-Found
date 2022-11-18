@@ -1,5 +1,17 @@
 #include <MFRC522.h> //biblioteca responsável pela comunicação com o módulo RFID-RC522
-#include <SPI.h> //biblioteca para comunicação do barramento SPI
+#include <SPI.h> 
+#include "WiFi.h"
+#include "HTTPClient.h"
+#include <iostream>
+// #include <Arduino_JSON.h>
+#include <ArduinoJson.h>
+#include <cstring>
+
+
+// Change the SSID and PASSWORD here if needed
+const char * WIFI_FTM_SSID = "Inteli-COLLEGE"; // SSID of AP that has FTM Enabled
+const char * WIFI_FTM_PASS = "QazWsx@123"; // STA Password
+
 
 #define SS_PIN    21
 #define RST_PIN   14
@@ -18,6 +30,54 @@ MFRC522::StatusCode status;
 // Definicoes pino modulo RC522
 MFRC522 mfrc522(SS_PIN, RST_PIN); 
 
+
+
+int postRequest(){
+  HTTPClient http;
+  const char* url = "http://10.128.65.224:5500/rfid";
+  http.begin(url);
+  http.addHeader("Content-Type", "application/json");
+
+     StaticJsonDocument<200> doc;
+      doc["modelo"] = "Macbook";
+      doc["localizacao"] = "sala 12";
+      doc["rec"] = "MCBK123";
+      doc["data"] = "18/11/22";
+
+      String requestBody;
+      serializeJson(doc, requestBody);
+
+      // int httpResponseCode = http.POST("{\"sensor\":\"ACCEL-MMA845X\",\"value1\":\"24.25\",\"value2\":\"49.54\",\"value3\":\"1005.14\"}");
+
+      int httpResponseCode = http.POST(requestBody);
+
+
+    if(httpResponseCode>0){
+
+      String response = http.getString();  //Get the response to the request
+
+      Serial.println(httpResponseCode);   //Print return code
+      Serial.println(response);           //Print request answer
+
+    }else{
+      Serial.print("Error on sending POST: ");
+      Serial.println(httpResponseCode);
+    }
+      http.end();
+      return 1;
+  
+}
+
+
+void reinit(){
+    // Inicia MFRC522
+  mfrc522.PCD_Init(); 
+  // Mensagens iniciais no serial monitor
+  Serial.println("Aproxime o seu cartao do leitor...");
+  Serial.println();
+}
+
+
 void setup() {
   // Inicia a serial
   Serial.begin(115200);
@@ -25,17 +85,24 @@ void setup() {
 
   pinMode(pinVerde, OUTPUT);
   pinMode(pinVermelho, OUTPUT);
-  
-  // Inicia MFRC522
-  mfrc522.PCD_Init(); 
-  // Mensagens iniciais no serial monitor
-  Serial.println("Aproxime o seu cartao do leitor...");
-  Serial.println();
+
+  Serial.println("Conectando ao Wifi");
+  WiFi.begin(WIFI_FTM_SSID, WIFI_FTM_PASS);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.println("WiFi Conectado");
+  delay(500);
+  reinit();
+
 
 }
 
 void loop() 
 {
+  digitalWrite(pinVermelho,1);
    // Aguarda a aproximacao do cartao
   if ( ! mfrc522.PICC_IsNewCardPresent()) 
   {
@@ -113,7 +180,7 @@ void leituraDados()
   }
   else{
       digitalWrite(pinVerde, HIGH);
-      delay(1000);
+      delay(2000);
       digitalWrite(pinVerde, LOW);
   }
 
@@ -125,7 +192,11 @@ void leituraDados()
   {
       Serial.write(buffer[i]);
   }
+  delay(500);
+  postRequest();
   Serial.println(" ");
+  delay(1000);
+  reinit();
 }
 
 //faz a gravação dos dados no cartão/tag
@@ -185,8 +256,11 @@ void gravarDados()
   else{
     Serial.println(F("MIFARE_Write() success: "));
     digitalWrite(pinVerde, HIGH);
-    delay(1000);
+    delay(2000);
     digitalWrite(pinVerde, LOW);
+    delay(1000);
+
+    reinit();
   }
  
 }
