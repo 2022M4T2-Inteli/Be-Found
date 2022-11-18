@@ -1,10 +1,16 @@
+$(document).ready(() => {
+    getDevices();
+
+});
+
 const geralDevices = document.querySelector("#geralDevices");
 const lastLocation = document.querySelector("#lastLocation");
 
 
 console.log("teste");
 
-$.ajax({
+const getDevices = () => {$.ajax({
+    async:true,
     url: "http://127.0.0.1:5500/rfid/find",
     type: 'GET',
     success: data => {
@@ -32,4 +38,6 @@ $.ajax({
         lastLocation.appendChild(location);
         });
     }
-});
+})
+};
+
