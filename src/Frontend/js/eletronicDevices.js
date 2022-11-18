@@ -5,7 +5,7 @@ $(document).ready(() => {
 
 const geralDevices = document.querySelector("#geralDevices");
 const lastLocation = document.querySelector("#lastLocation");
-
+var aux = 0;
 
 console.log("teste");
 
@@ -32,10 +32,13 @@ const getDevices = () => {$.ajax({
         `
         geralDevices.appendChild(div);
 
-        location.innerHTML = `
-        <p class="lastInfoDev">${element.localizacao}</p>
-        `
-        lastLocation.appendChild(location);
+        if(aux == 0){
+            location.innerHTML = `
+            <p class="lastInfoDev">${element.localizacao}</p>
+            `
+            lastLocation.appendChild(location);
+            aux++;
+        };
         });
     }
 })
