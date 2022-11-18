@@ -21,11 +21,11 @@ const getDevices = () => {$.ajax({
         div.innerHTML = `
         <div class="devices">
             <div class="textDevices">
-                <svg class="svgCircle" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14" height="14" rx="7" fill="#19B69B"/></svg>
+            <img class="circleFillGreenList" src="../imagens/circleFillGreen" alt="">
                 <p><b>${element.rec}</b><br>${element.data}</p>
             </div>
             <div class="imgCategoryDevice">
-                <img class="mapPin" src="../imagens/map-pin.svg" alt="map_pin">
+                <img class="mapPinList" src="../imagens/map-pin.svg" alt="map_pin">
                 <p class="textCategory">${element.modelo}</p>
             </div>
         </div>

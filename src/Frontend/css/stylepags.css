@@ -11,6 +11,7 @@ html, body{
 }
 
 .sidebar{
+    z-index: 2;
     width: 8.22%;
     height: 100%;
     background-color: #ffffff;
@@ -189,12 +190,17 @@ nav div{
 /* electronic devices top list */
 .topList {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .topList p {
-    font-family: 'Inter', sans-serif ;font-size: 14px;
+    font-family: 'Inter', sans-serif ;font-size: 16px;
     padding-left: 13px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    
 }
 
 /* active location number background */
@@ -216,12 +222,19 @@ nav div{
 }
 
 /* electronic devices listed specifically */
+.geralDevices{
+    display: flex;
+    flex-direction: column;
+}
+
 .devices{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* padding-left: 13px;
-    padding-right: 13px; */
+    padding-left: 13px;
+    padding-right: 13px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .textDevices{
@@ -229,9 +242,21 @@ nav div{
     justify-content: flex-start;
 }
 
+.mapPinList{
+    margin-bottom: 2vh;
+}
+
+.circleFillGreenList{
+    width: 15%;
+    height: 15%;
+    margin-right: 1vh;
+    margin-top: 2vh;
+}
+
 .imgCategoryDevice{
     display: flex;
     justify-content: end;
+    align-items: flex-end;
     padding-left: 7vh;
 }
 /* name and update of electronic devices, paragraphs specifically */
@@ -251,6 +276,8 @@ nav div{
     border: 1px solid #231F20;
     border-radius: 100px;
     margin-left: 1vh;
+    align-items: flex-end;
+    justify-content: end;
 }
 
 /* device list status ball */
@@ -313,11 +340,15 @@ nav div{
 }
 
 .register p{
-    font-size: 14px;
+    font-size: 12px;
 }
 
-#test{
-    width: 100%;
+.circleFillGreenInfo{
+    width: 35%;
+    height: 35%;
+    margin-top: 3px;
+    padding-right: 1vh;
+    padding-left: 2vh;
 }
 .connectDevide{
     display: flex;
@@ -366,23 +397,58 @@ nav div{
     width: 15%;
 }
 
+.currentLocation{
+    width: 19%;
+    padding-bottom: 1vh;
+    padding-left: 1vh;
+}
+
+.lastLocation{
+    width: 19%;
+    padding-top: 2px;
+    padding-left: 1vh;
+}
+
+.perimeterLocation{
+    width: 19%;
+    padding-left: 1vh;
+}
+
 .imgInfo{
     display: flex;
     justify-content: start;
     align-items: center;
     padding-top: 7px;
 }
-
+.perimeterGreen{
+    padding-left: 5vh;
+    width: 25%;
+}
 .spaceTextDevice {
     padding-left: 1vh;
+    padding-top: 1vh;
+}
+
+.spaceTextDevice1{
+    padding-left: 1vh;
+    padding-top: 13px;
+}
+
+.spaceTextDevice2{
+    padding-left: 1vh;
+    padding-top: 2vh;
 }
 
 .lastInfoDev{
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 0;
     padding-left: 4vh;
     color: #0370AB;
 }
 
 .lastInfoDev2{
+    padding-top: 12px;
     padding-left: 3vh;
     color: #0370AB;
 }
@@ -431,8 +497,9 @@ nav div{
 
 input[type=text], select {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 8px 10px;
+    margin-top: 2px;
+    /* margin: 8px 0; */
     display: inline-block;
     border: 1px solid #F2F2F2;
     border-radius: 4px;
@@ -441,10 +508,12 @@ input[type=text], select {
 }
 
 input[type=text]:focus, select:focus {
-    border: 1px solid #e50a0a;
+    border: 1px solid #b9b4b4;
 }
 
 input[type=text]::placeholder{
     color: #9d9d9d96;
 }
+
+
 

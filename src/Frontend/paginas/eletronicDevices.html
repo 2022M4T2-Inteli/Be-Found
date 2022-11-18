@@ -66,23 +66,23 @@
         <section class="deviceStatus" id="titleDevices">
             <div class="cardStatusDevice">
                 <div id="lastLocation" class="imgInfo">
-                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="#D5FFD5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15.875 26C15.993 25.8426 16.1783 25.75 16.375 25.75H19.5C19.8452 25.75 20.125 26.0298 20.125 26.375C20.125 26.7202 19.8452 27 19.5 27H16.6875L13.875 30.75H30.125L27.3125 27H24.5C24.1548 27 23.875 26.7202 23.875 26.375C23.875 26.0298 24.1548 25.75 24.5 25.75H27.625C27.8217 25.75 28.007 25.8426 28.125 26L31.875 31C32.017 31.1894 32.0399 31.4428 31.934 31.6545C31.8281 31.8662 31.6117 32 31.375 32H12.625C12.3883 32 12.1719 31.8662 12.066 31.6545C11.9601 31.4428 11.983 31.1894 12.125 31L15.875 26Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M22 13.25C19.9289 13.25 18.25 14.9289 18.25 17C18.25 19.0711 19.9289 20.75 22 20.75C24.0711 20.75 25.75 19.0711 25.75 17C25.75 14.9289 24.0711 13.25 22 13.25ZM17 17C17 14.2386 19.2386 12 22 12C24.7614 12 27 14.2386 27 17C27 19.5498 25.0914 21.6538 22.625 21.9613V28.875C22.625 29.2202 22.3452 29.5 22 29.5C21.6548 29.5 21.375 29.2202 21.375 28.875V21.9613C18.9086 21.6538 17 19.5498 17 17Z" fill="black"/></svg>
+                    <img class="currentLocation" src="../imagens/currentLocation" alt="">
                     <p class="spaceTextDevice">Localização atual:</p>
                     <!-- <p class="lastInfoDev">Sala 10</p> -->
                 </div>
             </div>
             <div class="cardStatusDevice">
                 <div class="imgInfo">
-                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="#CCF8FE"/><path d="M22 16.375C22 16.0298 21.7202 15.75 21.375 15.75C21.0298 15.75 20.75 16.0298 20.75 16.375V23.25C20.75 23.4743 20.8702 23.6814 21.0649 23.7927L25.4399 26.2927C25.7396 26.4639 26.1214 26.3598 26.2927 26.0601C26.4639 25.7604 26.3598 25.3786 26.0601 25.2073L22 22.8873V16.375Z" fill="black"/><path d="M22 32C27.5228 32 32 27.5228 32 22C32 16.4772 27.5228 12 22 12C16.4772 12 12 16.4772 12 22C12 27.5228 16.4772 32 22 32ZM30.75 22C30.75 26.8325 26.8325 30.75 22 30.75C17.1675 30.75 13.25 26.8325 13.25 22C13.25 17.1675 17.1675 13.25 22 13.25C26.8325 13.25 30.75 17.1675 30.75 22Z" fill="black"/></svg>   
-                    <p class="spaceTextDevice">Ultima localização:</p>
+                    <img class="lastLocation" src="../imagens/lastLocation" alt="">
+                    <p class="spaceTextDevice1">Ultima localização:</p>
                     <p class="lastInfoDev2">Sala 11</p>
                 </div>
             </div>
             <div class="cardStatusDevice">
                 <div class="imgInfo">
-                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44Z" fill="#CB2130"/><path d="M22 30.75C17.1675 30.75 13.25 26.8325 13.25 22C13.25 17.1675 17.1675 13.25 22 13.25C26.8325 13.25 30.75 17.1675 30.75 22C30.75 26.8325 26.8325 30.75 22 30.75ZM22 32C27.5228 32 32 27.5228 32 22C32 16.4772 27.5228 12 22 12C16.4772 12 12 16.4772 12 22C12 27.5228 16.4772 32 22 32Z" fill="#FFF3F3"/><path d="M22 28.25C18.5482 28.25 15.75 25.4518 15.75 22C15.75 18.5482 18.5482 15.75 22 15.75C25.4518 15.75 28.25 18.5482 28.25 22C28.25 25.4518 25.4518 28.25 22 28.25ZM22 29.5C26.1421 29.5 29.5 26.1421 29.5 22C29.5 17.8579 26.1421 14.5 22 14.5C17.8579 14.5 14.5 17.8579 14.5 22C14.5 26.1421 17.8579 29.5 22 29.5Z" fill="#FFF3F3"/><path d="M22 25.75C19.9289 25.75 18.25 24.0711 18.25 22C18.25 19.9289 19.9289 18.25 22 18.25C24.0711 18.25 25.75 19.9289 25.75 22C25.75 24.0711 24.0711 25.75 22 25.75ZM22 27C24.7614 27 27 24.7614 27 22C27 19.2386 24.7614 17 22 17C19.2386 17 17 19.2386 17 22C17 24.7614 19.2386 27 22 27Z" fill="#FFF3F3"/><path d="M23.875 22C23.875 23.0355 23.0356 23.875 22 23.875C20.9645 23.875 20.125 23.0355 20.125 22C20.125 20.9645 20.9645 20.125 22 20.125C23.0356 20.125 23.875 20.9645 23.875 22Z" fill="#FFF3F3"/></svg>       
-                    <p class="spaceTextDevice">Perimêtro Escolar:</p>
-                    <svg id="imgPerimeter" width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M51 25C51 38.8071 39.5833 50 25.5 50C11.4167 50 0 38.8071 0 25C0 11.1929 11.4167 0 25.5 0C39.5833 0 51 11.1929 51 25ZM38.3467 15.5302C37.4131 14.6149 35.8994 14.6149 34.9658 15.5302C34.9433 15.5523 34.9221 15.5757 34.9024 15.6003L23.8342 29.4273L17.1611 22.8851C16.2275 21.9698 14.7138 21.9698 13.7803 22.8851C12.8467 23.8004 12.8467 25.2843 13.7803 26.1996L22.2158 34.4698C23.1494 35.3851 24.6631 35.3851 25.5967 34.4698C25.6174 34.4494 25.6371 34.4279 25.6554 34.4054L38.3806 18.8109C39.2801 17.8932 39.2688 16.4343 38.3467 15.5302Z" fill="#19B69B"/></svg>      
+                    <img class="perimeterLocation" src="../imagens/perimeterSchool" alt="">
+                    <p class="spaceTextDevice2">Perimêtro Escolar:</p>
+                    <img class="perimeterGreen" src="../imagens/perimeterRigth" alt="">      
                 </div>
             </div>
         </section>
@@ -114,9 +114,7 @@
                 <div class="register">
                     <p>Registrado em 10/01/2021</p>
                     <div class="connectDevide">
-                        <svg id="test" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" color="green" viewBox="0 0 16 16">
-                            <circle cx="8" cy="8" r="8"/>
-                          </svg>
+                        <img class="circleFillGreenInfo" src="../imagens/circleFillGreen" alt="">
                         <p>Conectado</p>
                     </div>
                 </div>
@@ -125,7 +123,7 @@
         <section id="list">
             <div class="topList">
                 <p>Localizações ativas: 900</p>
-                <div class="activeLocations"></div>
+                <!-- <div class="activeLocations"></div> -->
                 <div class="iconsTopList">
                     <img src="../imagens/filter.svg" alt="">
                     <img src="../imagens/more-vertical.svg" alt="">
@@ -135,11 +133,11 @@
             <div id="geralDevices" class="geralDevices">
                 <!-- <div class="devices">
                     <div class="textDevices">
-                        <svg class="svgCircle" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14" height="14" rx="7" fill="#19B69B"/></svg>
+                        <img class="circleFillGreenList" src="../imagens/circleFillGreen" alt="">
                         <p><b>DSK0032</b><br>Atualizado a 5 minutos</p>
                     </div>
                     <div class="imgCategoryDevice">
-                        <img class="mapPin" src="../imagens/map-pin.svg" alt="map_pin">
+                        <img class="mapPinList" src="../imagens/map-pin.svg" alt="map_pin">
                         <p class="textCategory">Desktop</p>
                     </div>
                 </div> -->
@@ -153,13 +151,13 @@
             <div class="inputsDevice">
                 <div class="oneInput">
                     <label>Nome do Dispositivo</label>
-                    <input class="inputInfoDevice" type="text" value="DSK0033" placeholder="Nome do Dispositivo" disabled>
+                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="DSK0033" placeholder="Nome do Dispositivo" disabled>
                     <label>Versão</label>
-                    <input class="inputInfoDevice" type="text" value="DELL 10" placeholder="Versão" disabled>
+                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="DELL 10" placeholder="Versão" disabled>
                     <label>Ultima atualização</label>
-                    <input class="inputInfoDevice" type="text" value="27/10/2022 17:54:00" placeholder="Ultima atualização" disabled>
+                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="27/10/2022 17:54:00" placeholder="Ultima atualização" disabled>
                     <label>Beacon Patrimônio</label>
-                    <input class="inputInfoDevice" type="text" value="002025" placeholder="Beacon Patrimônio" disabled>
+                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="002025" placeholder="Beacon Patrimônio" disabled>
                 </div>
                 <div class="twoInput">
                     <label>Tipo de Sistema</label>
@@ -175,9 +173,9 @@
                         <option value="">32GB</option>
                     </select>
                     <label>ID do Dispositivo</label>
-                    <input class="inputInfoDevice" type="text" value="4389-43834-94834-HGDU" placeholder="ID do Dispositivo" disabled>
+                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="4389-43834-94834-HGDU" placeholder="ID do Dispositivo" disabled>
                     <label>ID do Produto</label>
-                    <input class="inputInfoDevice" type="text" value="JDHB8478-OIBST-DS6G-9D56" placeholder="ID do Produto" disabled>
+                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="JDHB8478-OIBST-DS6G-9D56" placeholder="ID do Produto" disabled>
                 </div>
             </div>
         </section>
