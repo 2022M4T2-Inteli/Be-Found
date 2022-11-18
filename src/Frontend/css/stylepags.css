@@ -269,8 +269,9 @@ nav div{
     text-align: center;
 }
 
-.navPag h6{
+.navPag p{
     font-family: 'Inter', sans-serif;
+    font-size: 12px;
     display: flex;
     justify-content: flex-start;
     padding-left: 4vh;
@@ -313,7 +314,10 @@ nav div{
 
 .register p{
     font-size: 14px;
+}
 
+#test{
+    width: 100%;
 }
 .connectDevide{
     display: flex;
@@ -329,6 +333,15 @@ nav div{
 
 .connectDevide p{
     color: #19B69B;
+}
+
+.mapPinDeviceInfo{
+    margin-top: 3px;
+}
+.tittlePag h5{
+    padding-top: 3vh;
+    display: flex;
+    align-items: center;
 }
 
 /* Device status */
