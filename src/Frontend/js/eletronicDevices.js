@@ -44,3 +44,16 @@ const getDevices = () => {$.ajax({
 })
 };
 
+buttonBuzzer(){
+    var buzzer = {
+        "url": "http://127.0.0.1:5500/wifi/teste",
+        "method": "PATCH",
+        "timeout": 0,
+        "data": {
+            "buzer": 1,
+        }
+      };
+      
+      $.ajax(buzzer);
+}
+
