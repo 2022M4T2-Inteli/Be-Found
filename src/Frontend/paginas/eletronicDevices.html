@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devices</title>
     <link rel="stylesheet" href="../css/stylepags.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
     <div class="containerr">
@@ -17,45 +20,19 @@
             </div>
             <div>
                 <a class="nav-link" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
-                        <path fill-rule="evenodd"
-                            d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map"viewBox="0 0 16 16"><path fill-rule="evenodd"d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" /><path fill-rule="evenodd"d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" /></svg>
                 </a>
                 <a class="nav-link" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop"viewBox="0 0 16 16"><path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" /></svg>
                 </a>
                 <a class="nav-link" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lamp"
-                        viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M5.04.303A.5.5 0 0 1 5.5 0h5c.2 0 .38.12.46.303l3 7a.5.5 0 0 1-.363.687h-.002c-.15.03-.3.056-.45.081a32.731 32.731 0 0 1-4.645.425V13.5a.5.5 0 1 1-1 0V8.495a32.753 32.753 0 0 1-4.645-.425c-.15-.025-.3-.05-.45-.08h-.003a.5.5 0 0 1-.362-.688l3-7ZM3.21 7.116A31.27 31.27 0 0 0 8 7.5a31.27 31.27 0 0 0 4.791-.384L10.171 1H5.83L3.209 7.116Z" />
-                        <path
-                            d="M6.493 12.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.052.075l-.001.004-.004.01V14l.002.008a.147.147 0 0 0 .016.033.62.62 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.62.62 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411Z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lamp" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M5.04.303A.5.5 0 0 1 5.5 0h5c.2 0 .38.12.46.303l3 7a.5.5 0 0 1-.363.687h-.002c-.15.03-.3.056-.45.081a32.731 32.731 0 0 1-4.645.425V13.5a.5.5 0 1 1-1 0V8.495a32.753 32.753 0 0 1-4.645-.425c-.15-.025-.3-.05-.45-.08h-.003a.5.5 0 0 1-.362-.688l3-7ZM3.21 7.116A31.27 31.27 0 0 0 8 7.5a31.27 31.27 0 0 0 4.791-.384L10.171 1H5.83L3.209 7.116Z" /><path d="M6.493 12.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.052.075l-.001.004-.004.01V14l.002.008a.147.147 0 0 0 .016.033.62.62 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.62.62 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411Z" /></svg>
                 </a>
                 <a class="nav-link" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                        <path
-                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
-                        <path
-                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16"> <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" /> <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" /></svg>
                 </a>
                 <a class="nav-link" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-bar-chart" viewBox="0 0 16 16">
-                        <path
-                            d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z" />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16"> <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z" /></svg>
                 </a>
                 <a class="nav-link" href="#">
                     <img src="../imagens/iconeEZ.png">
@@ -66,41 +43,33 @@
         <section class="deviceStatus" id="titleDevices">
             <div class="cardStatusDevice">
                 <div id="lastLocation" class="imgInfo">
-                    <img class="currentLocation" src="../imagens/currentLocation" alt="">
+                    <img class="currentLocation" src="../imagens/currentLocation.png" alt="">
                     <p class="spaceTextDevice">Localização atual:</p>
-                    <!-- <p class="lastInfoDev">Sala 10</p> -->
+                    <p id="currentLocDev" class="lastInfoDev"></p>
                 </div>
             </div>
             <div class="cardStatusDevice">
                 <div class="imgInfo">
-                    <img class="lastLocation" src="../imagens/lastLocation" alt="">
-                    <p class="spaceTextDevice1">Ultima localização:</p>
-                    <p class="lastInfoDev2">Sala 11</p>
+                    <img class="lastLocation" src="../imagens/lastLocation.png" alt="">
+                    <p class="spaceTextDevice">Ultima localização:</p>
+                    <p id="lastLocDev" class="lastInfoDev"></p>
                 </div>
             </div>
             <div class="cardStatusDevice">
                 <div class="imgInfo">
-                    <img class="perimeterLocation" src="../imagens/perimeterSchool" alt="">
-                    <p class="spaceTextDevice2">Perimêtro Escolar:</p>
-                    <img class="perimeterGreen" src="../imagens/perimeterRigth" alt="">      
+                    <img class="perimeterLocation" src="../imagens/perimeterSchool.png" alt="">
+                    <p class="spaceTextDevice">Perimêtro Escolar:</p>
+                    <img class="perimeterGreen" src="../imagens/perimeterRigth.png" alt="">      
                 </div>
             </div>
         </section>
         <!-- <nav id="navBar"></nav> -->
         <nav class="nav justify-content" id="navbar">
             <h6 id="nomeMapa">Mapa</h6>
-            <svg id="iconeMapa" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-map" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" />
-            </svg>
+            <svg id="iconeMapa" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z" /></svg>
             <h6 id="nomePerfil">Laís Carvalho</h6>
             <img id="fotoPerfil" src="../imagens/fotoPerfil.png">
-            <svg id="iconeSeta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-            </svg>
+            <svg id="iconeSeta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /></svg>
         </nav>
         <main class="navPag" id="navpag">
             <p id="pageOne">INFORMAÇÕES GERAIS</p><br><p id="pageTwo">HISTÓRICO</p><br><p id="pageThree">ALERTAS</p>
@@ -111,71 +80,86 @@
                     <h5>Informações Gerais</h5>
                     <svg class="mapPinDeviceInfo" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <rect width="31" height="31" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_358_4105" transform="scale(0.0133333)"/></pattern><image id="image0_358_4105" width="75" height="75" xlink:href="data:image/png;base64,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"/></defs></svg>      
                 </div>
-                <div class="register">
-                    <p>Registrado em 10/01/2021</p>
-                    <div class="connectDevide">
-                        <img class="circleFillGreenInfo" src="../imagens/circleFillGreen" alt="">
-                        <p>Conectado</p>
-                    </div>
+                <div id="registerData" class="register">
+                    
                 </div>
             </div>
         </section>
         <section id="list">
             <div class="topList">
-                <p>Localizações ativas: 900</p>
-                <!-- <div class="activeLocations"></div> -->
+                <p>Dispositivos ativos:<div class="activeLocations"><p id="numberDevices"></p></div></p>
                 <div class="iconsTopList">
-                    <img src="../imagens/filter.svg" alt="">
-                    <img src="../imagens/more-vertical.svg" alt="">
+                    <div class="dropdown">
+                        <button class="buttonsTopList" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../imagens/search.svg" alt="">
+                        </button>
+                        <div class="form-outline dropdown-menu">
+                            <input onkeyup="searchFilter()" type="search" id="searchName" class="form-control" placeholder="Pesquisar" aria-label="Search" />
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="buttonsTopList" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../imagens/filter.svg" alt="">
+                        </button>
+                        <ul class="dropdown-menu">
+                          <h5>Filtrar por:</h5>
+                          <li><button onclick="filterCategory(0)" class="dropdown-item" type="button">Desktop</button></li>
+                          <li><button onclick="filterCategory(1)" class="dropdown-item" type="button">IPAD</button></li>
+                          <li><button onclick="filterCategory(2)" class="dropdown-item" type="button">Notebook</button></li>
+                          <li><button onclick="filterCategory(3)" class="dropdown-item" type="button">Chrome</button></li>
+                          <li><button onclick="filterCategory(4)" class="dropdown-item" type="button">Apple Pencil</button></li>
+                          <li><button onclick="cleanfilter()" class="dropdown-item" type="button"><span class="cleanClass">Limpar Filtro</span></button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <hr>
             <div id="geralDevices" class="geralDevices">
-                <!-- <div class="devices">
-                    <div class="textDevices">
-                        <img class="circleFillGreenList" src="../imagens/circleFillGreen" alt="">
-                        <p><b>DSK0032</b><br>Atualizado a 5 minutos</p>
+                <!-- <button onclick="deviceDetail()" class="buttonDevices">
+                    <div class="devices">
+                        <div class="textDevices">
+                            <img class="circleFillGreenList" src="../imagens/circleFillGreen.png" alt="">
+                            <p><b>DSK0032</b><br>Atualizado a 5 minutos</p>
+                        </div>
+                        <div class="imgCategoryDevice">
+                            <img class="mapPinList" src="../imagens/map-pin.svg" alt="map_pin">
+                            <div class="textCategory"><p>Desktop</p></div>
+                        </div>
                     </div>
-                    <div class="imgCategoryDevice">
-                        <img class="mapPinList" src="../imagens/map-pin.svg" alt="map_pin">
-                        <p class="textCategory">Desktop</p>
-                    </div>
-                </div> -->
+                </button> -->
             </div>
         </section>
         <section id="info">
             <div class="topInfoDevice">
-                <button onclick="buttonBuzzer()" style="border: none; background-color: #F6F7FA;" class="volButton"><img src="../imagens/volume-2.svg" alt=""></button>
-                <img src="../imagens/more-horizontal.svg" alt="">
+                <button id="btnMusic" disabled onclick="buttonBuzzer()" style="border: none; background-color: #F6F7FA;" class="volButton"><img src="../imagens/volume-2.svg" alt=""></button>
+                <div class="dropdown">
+                    <button id="btnMore" disabled class="moreButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../imagens/more-horizontal.svg" alt="">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><button onclick="editInfos()" class="btn"><img src="../imagens/editInfos.png" width="30" height="30" alt=""><span class="editSpan">Editar</span></button></li>
+                      <li><button class="btn"><img src="../imagens/attInfos.png" width="30" height="30" alt=""><span class="attSpan">Atualizar</span></button></li>
+                      <li><button class="btn"><img src="../imagens/removeDevices.png" width="30" height="30" alt=""><span class="removSpan">Desconectar</span></button></li>
+                    </ul>
+                </div>
             </div>
             <div class="inputsDevice">
                 <div class="oneInput">
                     <label>Nome do Dispositivo</label>
-                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="DSK0033" placeholder="Nome do Dispositivo" disabled>
+                    <input id="input0" onfocusout="disableField(0)" class="inputInfoDevice" type="text" placeholder="Nome do Dispositivo" disabled>
                     <label>Versão</label>
-                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="DELL 10" placeholder="Versão" disabled>
-                    <label>Ultima atualização</label>
-                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="27/10/2022 17:54:00" placeholder="Ultima atualização" disabled>
-                    <label>Beacon Patrimônio</label>
-                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="002025" placeholder="Beacon Patrimônio" disabled>
+                    <input id="input1" onfocusout="disableField(1)" class="inputInfoDevice" type="text" placeholder="Versão" disabled>
+                    <label>ID do Dispositivo</label>
+                    <input id="input2" onfocusout="disableField(2)" class="inputInfoDevice" type="text" placeholder="ID do Dispositivo" disabled>
+                    
                 </div>
                 <div class="twoInput">
-                    <label>Tipo de Sistema</label>
-                    <select>
-                        <option value="">Windows</option>
-                        <option value="">Apple</option>
-                    </select>
-                    <label>Memória RAM</label>
-                    <select>
-                        <option value="">4GB</option>
-                        <option value="">8GB</option>
-                        <option value="">16GB</option>
-                        <option value="">32GB</option>
-                    </select>
-                    <label>ID do Dispositivo</label>
-                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="4389-43834-94834-HGDU" placeholder="ID do Dispositivo" disabled>
+                    <label>Ultima atualização</label>
+                    <input id="input3" onfocusout="disableField(3)" class="inputInfoDevice" type="text" placeholder="Ultima atualização" disabled>
+                    <label>Beacon Patrimônio</label>
+                    <input id="input4" onfocusout="disableField(4)" class="inputInfoDevice" type="text" placeholder="Beacon Patrimônio" disabled>
                     <label>ID do Produto</label>
-                    <input id="inputInfoDevice" class="inputInfoDevice" type="text" value="JDHB8478-OIBST-DS6G-9D56" placeholder="ID do Produto" disabled>
+                    <input id="input5" onfocusout="disableField(5)" class="inputInfoDevice" type="text" placeholder="ID do Produto" disabled>
                 </div>
             </div>
         </section>
