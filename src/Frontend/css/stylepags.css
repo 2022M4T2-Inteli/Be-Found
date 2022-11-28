@@ -298,7 +298,6 @@ nav div{
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-left: 7vh;
 }
 /* name and update of electronic devices, paragraphs specifically */
 .textDevices p{
@@ -561,7 +560,7 @@ input[type=text]::placeholder{
 
 
 .divButton {
-    margin: 0;
+    margin-top: 0;
     padding: 0;
     display: contents;
     justify-content: space-between;
@@ -607,4 +606,9 @@ input[type=text]::placeholder{
 
 .inputTST{
     background: red;
+}
+
+.volButton{
+    border: none;
+    background-color: #F6F7FA;
 }
