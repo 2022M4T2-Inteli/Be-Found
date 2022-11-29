@@ -5,8 +5,8 @@ const locationRf = require('../models/LocationRF.js')
 
 router.post('/', async (req, res) => {
 
-    const { modelo, localizacao, rec, data } = req.body;
-    const location = { modelo, localizacao, rec, data };
+    const { modelo, localizacao, rec} = req.body;
+    const location = { modelo, localizacao, rec};
     console.log(req.body);
 
     try {
