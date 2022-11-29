@@ -4,8 +4,9 @@ const locationRf = mongoose.model('locationRf',{
     modelo:String,
     localizacao:String,
     rec:String,
-    data:{type: Date,
-        default: Date.now
+    data:{
+        type: Date,
+        default: Date.now,
     },
     buzer:{
         type: Number,
