@@ -114,6 +114,25 @@ router.patch('/buzer/:id', async (req, res) => {
     }
 })
 
+router.patch('/:id', async (req, res) => {
+    const id = req.params.id;
+    const { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp} = req.body;
+    const all = { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp}
+    // const buz = buzer;
+    try {
+        const updateLoc = await locationWifi.updateOne({ _id: id }, all);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(all);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
 //Delete by id
 router.delete('/del/:id', async (req, res) => {
     const id = req.params.id
