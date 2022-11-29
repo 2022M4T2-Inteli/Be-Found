@@ -20,8 +20,6 @@ app.use(
 app.use(express.json())
 
 
-
-
 //endpoit inicial
 // app.get('/' , (req,res) => {
 //     res.json({
