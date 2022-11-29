@@ -101,7 +101,7 @@ function deviceDetail(id) {
                 <ul class="dropdown-menu">
                     <li><button onclick="editInfos('${element._id}')" class="btn"><img src="../imagens/editInfos.png" width="30" height="30" alt=""><span class="editSpan">Editar</span></button></li>
                     <li><button class="btn"><img src="../imagens/attInfos.png" width="30" height="30" alt=""><span class="attSpan">Atualizar</span></button></li>
-                    <li><button class="btn"><img src="../imagens/removeDevices.png" width="30" height="30" alt=""><span class="removSpan">Desconectar</span></button></li>
+                    <li><button onclick="removeDevice('${element._id}')" class="btn"><img src="../imagens/removeDevices.png" width="30" height="30" alt=""><span class="removSpan">Desconectar</span></button></li>
                 </ul>
                 `
                 inputDiv.innerHTML = `
@@ -240,4 +240,14 @@ function buttonBuzzer(id) {
     };
 
     $.ajax(buzzer);
+}
+
+function removeDevice(id){
+    var deleteDev = {
+        "url": `http://127.0.0.1:5500/wifi/del/${id}`,
+        "method": "DELETE",
+        "timeout": 0,
+    };
+
+    $.ajax(deleteDev);
 }
