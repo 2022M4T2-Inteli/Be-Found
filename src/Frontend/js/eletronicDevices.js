@@ -14,17 +14,18 @@ var activeFilter = false;
 
 console.log("teste");
 
-const getDevices = () => {$.ajax({
-    async:true,
-    url: "http://127.0.0.1:5500/rfid/find",
-    type: 'GET',
-    success: data => {
-        data.forEach(element => {
-            const div = document.createElement("div");
-            div.classList.add('divButton');
-            div.setAttribute("id", "buttonListDevices");
-            
-        div.innerHTML = `
+const getDevices = () => {
+    $.ajax({
+        async: true,
+        url: "http://127.0.0.1:5500/rfid/find",
+        type: 'GET',
+        success: data => {
+            data.forEach(element => {
+                const div = document.createElement("div");
+                div.classList.add('divButton');
+                div.setAttribute("id", "buttonListDevices");
+
+                div.innerHTML = `
         <button onclick="deviceDetail('${element._id}')" class="buttonDevices">
             <div class="devices">
                 <div class="textDevices">
@@ -32,22 +33,22 @@ const getDevices = () => {$.ajax({
                     <p><b>${element.rec}</b><br>${element.timestamp}</p>
                 </div>
                 <div class="imgCategoryDevice">
-                    <section class="textCategory"><p id="qcaraio`+idFilter+`">${element.modelo}</p></section>
+                    <section class="textCategory"><p id="qcaraio`+ idFilter + `">${element.modelo}</p></section>
                 </div>
             </div>
         </button>
         `
-        idFilter += 1;
-        ndev += 1;
-        geralDevices.appendChild(div);
-        });
-        ReactDOM.render(ndev, document.getElementById("numberDevices"));
-    }
-})
+                idFilter += 1;
+                ndev += 1;
+                geralDevices.appendChild(div);
+            });
+            ReactDOM.render(ndev, document.getElementById("numberDevices"));
+        }
+    })
 };
 
 
-function deviceDetail(id){
+function deviceDetail(id) {
     // Div para conter os botoes do buzzer e de opções
     addInputdiv.innerHTML = "";
     const divButtonsTop = document.createElement("div");
@@ -61,7 +62,7 @@ function deviceDetail(id){
     deced.innerHTML = "";
     decedd.innerHTML = "";
     register.innerHTML = "";
-    
+
     console.log("BUCETAAAAA");
     $.ajax({
         url: "http://127.0.0.1:5500/rfid/find",
@@ -125,7 +126,7 @@ function deviceDetail(id){
                 const currentLoc = `${element.localizacao}`;
                 const lastLoc = `${element.localizacao}`;
                 var idDevicess = `${element._id}`;
-                if(idDevicess == id){
+                if (idDevicess == id) {
                     register.appendChild(tittleView);
                     $("#currentLocDev").append(currentLoc);
                     $("#lastLocDev").append(lastLoc);
@@ -140,56 +141,56 @@ function deviceDetail(id){
 
 function searchFilter() {
     var input, filter, geralDevicesht, buttonDev, p, i, txtValue;
-  
+
     input = document.getElementById("searchName");
     filter = input.value.toUpperCase();
     geralDevicesht = document.getElementById("geralDevices");
     buttonDev = geralDevicesht.getElementsByTagName("button");
 
     for (i = 0; i < buttonDev.length; i++) {
-      p = buttonDev[i].getElementsByTagName("p")[0];
-      if (p) {
-        txtValue = p.textContent || p.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            buttonDev[i].style.display = "";
-        } else {
-            buttonDev[i].style.display = "none";
+        p = buttonDev[i].getElementsByTagName("p")[0];
+        if (p) {
+            txtValue = p.textContent || p.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                buttonDev[i].style.display = "";
+            } else {
+                buttonDev[i].style.display = "none";
+            }
         }
-      }
     }
 }
 
-function filterCategory(id){
-    if(activeFilter == true){
+function filterCategory(id) {
+    if (activeFilter == true) {
         cleanfilter();
     };
     activeFilter = true;
     var categoryAr = ["Macbook", "tatu", "vitoria", "olocomeu", "dellzada"];
     var filter, geralDevicesht, buttonDevFilter, pfilter, i, txtValue;
-  
+
     filter = categoryAr[id];
     geralDevicesht = document.getElementById("geralDevices"); // section with all buttons of devices 
     buttonDevFilter = geralDevicesht.getElementsByTagName("button"); // button for display none or not
 
     for (i = 0; i < buttonDevFilter.length; i++) {
         pfilter = document.getElementById("qcaraio" + i);
-      console.log("qcaraio" + i);
-      console.log("conteudo dele " + pfilter.innerText);
-      console.log("comparando com " + filter);
+        console.log("qcaraio" + i);
+        console.log("conteudo dele " + pfilter.innerText);
+        console.log("comparando com " + filter);
 
-      if (pfilter) {
-        txtValue = pfilter.textContent || pfilter.innerText;
-        if (txtValue.indexOf(filter) > -1) {
-            buttonDevFilter[i].style.display = "";
-            console.log("conteudo diferente com o indice")
-        } else{
-            buttonDevFilter[i].style.display = "none";
+        if (pfilter) {
+            txtValue = pfilter.textContent || pfilter.innerText;
+            if (txtValue.indexOf(filter) > -1) {
+                buttonDevFilter[i].style.display = "";
+                console.log("conteudo diferente com o indice")
+            } else {
+                buttonDevFilter[i].style.display = "none";
+            }
         }
-      }
     }
 }
 
-function cleanfilter(){
+function cleanfilter() {
     var geralDevicesht, buttonDevFilter, i;
     geralDevicesht = document.getElementById("geralDevices"); // section with all buttons of devices 
     buttonDevFilter = geralDevicesht.getElementsByTagName("button"); // button for display none or not
@@ -199,7 +200,7 @@ function cleanfilter(){
 
 }
 
-function editInfos(id){
+function editInfos(id) {
     for (i = 0; i <= 5; i++) {
         document.getElementsByName(id)[i].disabled = false;
         document.getElementsByName(id)[i].placeholder = "";
@@ -207,25 +208,28 @@ function editInfos(id){
     }
 }
 
-function disableField(n, id){
-    var change = ["rec", "version", "idd", "timestamp", "beaconP", "idp"];
-    var changeOn = change[n];
-    var valueInput = document.getElementsByName(id)[n].value;
-    var editInput = {
-        "url": `http://127.0.0.1:5500/wifi/${id}`,
+function disableField(n, id) {
+    var inputs = document.getElementsByName(id);
+    const editInput = {
+        "url": `http://127.0.0.1:5500/rfid/${id}`,
         "method": "PATCH",
         "timeout": 0,
         "data": {
-            changeOn: valueInput,
+            "rec": inputs[0].value, 
+            "version": inputs[1].value,
+            "idd": inputs[2].value,
+            "timestamp": inputs[3].value,
+            "beaconP": inputs[4].value,
+            "idp": inputs[5].value,
         }
-      };
-      
-      $.ajax(editInput);
+    };
+
+    $.ajax(editInput);
     document.getElementsByName(id)[n].disabled = true;
     document.getElementsByName(id)[n].style.background = "#F2F2F2";
 }
 
-function buttonBuzzer(id){
+function buttonBuzzer(id) {
     var buzzer = {
         "url": `http://127.0.0.1:5500/wifi/buzer/${id}`,
         "method": "PATCH",
@@ -233,7 +237,7 @@ function buttonBuzzer(id){
         "data": {
             "buzer": 1,
         }
-      };
-      
-      $.ajax(buzzer);
+    };
+
+    $.ajax(buzzer);
 }
