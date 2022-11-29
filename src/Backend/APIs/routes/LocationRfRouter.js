@@ -58,8 +58,8 @@ router.post('/', async (req, res) => {
 //Patch by id
 router.patch('/:id', async (req, res) => {
     const id = req.params.id;
-    const { modelo, localizacao, rec, data } = req.body;
-    const location = { modelo, localizacao, rec, data };
+    const {modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp } = req.body;
+    const location = { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp };
     try {
         const updateLoc = await locationRf.updateOne({ _id: id }, location);
         if (updateLoc.matchedCount === 0) {

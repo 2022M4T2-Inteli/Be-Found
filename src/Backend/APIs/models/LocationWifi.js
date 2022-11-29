@@ -30,7 +30,7 @@ const locationWifi = mongoose.model('locationWifi', {
         type: String,
         default: "Indefinido",
     },
-    idd:{
+    status:{
         type: String,
         default: "Indefinido",
     },
