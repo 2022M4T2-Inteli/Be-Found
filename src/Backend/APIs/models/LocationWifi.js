@@ -7,7 +7,11 @@ const locationWifi = mongoose.model('locationWifi', {
         type: String,
         default: "Indefinido",
     },
-    localizacao:{
+    loc:{
+        type: String,
+        default: "Indefinido",
+    },
+    locAnterior:{
         type: String,
         default: "Indefinido",
     },
@@ -19,6 +23,10 @@ const locationWifi = mongoose.model('locationWifi', {
         default: () => moment().format('L')
     },
     buzer:{
+        type: Number,
+        default: 0,
+    },
+    perm:{
         type: Number,
         default: 0,
     },
@@ -34,9 +42,13 @@ const locationWifi = mongoose.model('locationWifi', {
         type: String,
         default: "Indefinido",
     },
-    idp:{
+    custody:{
         type: String,
         default: "Indefinido",
+    },
+    register:{
+        type:String,
+        default: "Indefinido"
     },
 })
 

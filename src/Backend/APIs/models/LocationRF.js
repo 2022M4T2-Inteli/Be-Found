@@ -11,30 +11,7 @@ const locationRf = mongoose.model('locationRf',{
         type: String,
         default: "Indefinido",
     },
-    rec:{
-        type: String,
-        default: "Indefinido",
-    },
-    timestamp:{type: String,
-        default: () => moment().format('L')
-    },
-    buzer:{
-        type: Number,
-        default: 0,
-    },
-    version:{
-        type: String,
-        default: "Indefinido",
-    },
     beaconP:{
-        type: String,
-        default: "Indefinido",
-    },
-    idd:{
-        type: String,
-        default: "Indefinido",
-    },
-    idp:{
         type: String,
         default: "Indefinido",
     },
