@@ -1,15 +1,15 @@
 const router = require('express').Router();
 
 const mongoose = require('mongoose');
-const locationRf = require('../models/LocationRF.js');
+const locationWifi = require('../models/LocationWifi.js')
 
-
+// Get by id
 router.get('/:id', async (req, res) => {
     const id = req.params.id;
     //const buz = req.body.buzer
 
     try {
-        const getId = await locationRf.findOne({ _id: id });
+        const getId = await locationWifi.findOne({ _id: id });
         res.status(200).json(getId);
         }
 
@@ -18,10 +18,11 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+//Get all
 router.get('/', async (req, res) => {
 
     try {
-        const wifiAll = await locationRf.find();
+        const wifiAll = await locationWifi.find();
         res.status(200).json(wifiAll);
     }
     catch (error) {
@@ -29,20 +30,20 @@ router.get('/', async (req, res) => {
     }
 })
 
-
+//Get buzer status by id
 router.get('/buzer/:id', async (req, res) => {
     const id = req.params.id;
     //const buz = req.body.buzer
 
     try {
-        const checkBuz = await locationRf.findOne({ _id: id });
+        const checkBuz = await locationWifi.findOne({ _id: id });
         if (!checkBuz) {
             res.status(424).json({ msg: "Não encontrado" });
             return
 
         }
         res.status(200).json({
-            buz: checkBuz.buzer
+            buzer: checkBuz.buzer
         });
 
     }
@@ -51,16 +52,56 @@ router.get('/buzer/:id', async (req, res) => {
     }
 })
 
+//Post new device
+router.post('/', async (req, res) => {
+
+    const { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp} = req.body;
+    const location = { 
+        modelo, 
+        localizacao, 
+        rec, 
+        timestamp, 
+        buzer, 
+        version, 
+        beaconP, 
+        idd, 
+        idp
+    };
+    console.log(req.body);
+
+    try {
+        // if(!modelo){
+        //     return
+        // }
+        await locationWifi.create(location);
+        res.status(201).json({ msg: "dado enviado com sucesso" });
+
+    } catch (error) {
+        res.status(500).json({ error: error })
+    }
+
+})
 
 
+//Patch buzer status by id
 router.patch('/buzer/:id', async (req, res) => {
     const id = req.params.id;
-    const { modelo, localizacao, rec, data, buzer } = req.body;
-    const buz = { modelo:modelo, localizacao:localizacao, rec:rec, data:data, buzer };
+    const { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp} = req.body;
+    const buz = { 
+        modelo:modelo, 
+        localizacao:localizacao, 
+        rec:rec, 
+        timestamp:timestamp, 
+        buzer, version:version, 
+        beaconP:beaconP, 
+        idd:idd, 
+        idp:idp,
+        buzer
+    };
 
     // const buz = buzer;
     try {
-        const updateLoc = await locationRf.updateOne({ _id: id }, buz);
+        const updateLoc = await locationWifi.updateOne({ _id: id }, buz);
         if (updateLoc.matchedCount === 0) {
             res.status(424).json({ msg: "Não encontrado" });
             return
@@ -73,10 +114,11 @@ router.patch('/buzer/:id', async (req, res) => {
     }
 })
 
+//Delete by id
 router.delete('/del/:id', async (req, res) => {
     const id = req.params.id
     try {
-        const deleteLoc = await locationRf.deleteOne({_id:id})
+        const deleteLoc = await locationWifi.deleteOne({_id:id})
         if (deleteLoc.deletedCount === 0) {
             res.status(424).json({ msg: 'Não encontrado' })
             return

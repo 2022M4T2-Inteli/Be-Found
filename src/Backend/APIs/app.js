@@ -2,7 +2,7 @@
 //login: joaoalca
 //senha: joaoalca123
 
-// config init
+// initial imports
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const PORT = 5500;
 const hostname = '127.0.0.1:';
 
-//leitura json
+//JSON read
 app.use(
     express.urlencoded({
         extended: true,
@@ -31,21 +31,21 @@ app.use(express.json())
 
 
 
-// rotas API
+// routes Frontend
 app.use(express.static("../../Frontend"));
 const RouterFront = require('./routes/routesFront.js');
 app.use('/', RouterFront);
 
 
-// /rfid
+// routes Rfid
 const RfRoutes = require('./routes/LocationRfRouter.js');
 app.use('/rfid', RfRoutes);
 
-
-const wifiRoutes = require('./routes/LocationWifi.js')
+// routes Wifi
+const wifiRoutes = require('./routes/LocationWifiRouter.js')
 app.use('/wifi',wifiRoutes)
 
-
+// Access CORS
 const cors = require("cors");
 app.use(
 	cors({
@@ -58,7 +58,6 @@ app.use(
 );
 
 //Host and db connect
-
 mongoose
     .connect(
         'mongodb+srv://joaoalca:joaoalca123@apicluster.ldpol3f.mongodb.net/bancodaapi?retryWrites=true&w=majority'

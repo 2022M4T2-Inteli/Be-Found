@@ -3,6 +3,39 @@ const router = require('express').Router();
 const mongoose = require('mongoose');
 const locationRf = require('../models/LocationRF.js')
 
+
+//Get all
+router.get('/find', async (req, res) => {
+
+    try {
+        const rfidLoc = await locationRf.find();
+        res.status(200).json(rfidLoc);
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
+//Get all from location
+router.get('/:location', async (req, res) => {
+    const { location } = req.params;
+
+    try {
+        const room = await locationRf.find({ localizacao: location });
+        if (!room) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+
+        }
+        res.status(200).json(room);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
+//Post new rfid tag
 router.post('/', async (req, res) => {
 
     const { modelo, localizacao, rec} = req.body;
@@ -22,38 +55,7 @@ router.post('/', async (req, res) => {
 
 })
 
-router.get('/find', async (req, res) => {
-
-    try {
-        const rfidLoc = await locationRf.find();
-        res.status(200).json(rfidLoc);
-    }
-    catch (error) {
-        res.status(500).json({ error: error });
-    }
-})
-
-// get by location
-router.get('/:location', async (req, res) => {
-    const { location } = req.params;
-
-    try {
-        const room = await locationRf.find({ localizacao: location });
-        if (!room) {
-            res.status(424).json({ msg: "Não encontrado" });
-            return
-
-        }
-        res.status(200).json(room);
-
-    }
-    catch (error) {
-        res.status(500).json({ error: error });
-    }
-})
-
-
-
+//Patch by id
 router.patch('/:id', async (req, res) => {
     const id = req.params.id;
     const { modelo, localizacao, rec, data } = req.body;
@@ -72,7 +74,7 @@ router.patch('/:id', async (req, res) => {
     }
 })
 
-
+//Delete all
 router.delete('/del-all', async (req, res) => {
     try {
         const deleteLoc = await locationRf.deleteMany()
