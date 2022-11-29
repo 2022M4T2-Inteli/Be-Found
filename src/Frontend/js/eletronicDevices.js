@@ -227,7 +227,7 @@ function disableField(n, id){
 
 function buttonBuzzer(id){
     var buzzer = {
-        "url": `http://127.0.0.1:5500/wifi/${id}`,
+        "url": `http://127.0.0.1:5500/wifi/buzer/${id}`,
         "method": "PATCH",
         "timeout": 0,
         "data": {

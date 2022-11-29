@@ -34,7 +34,7 @@ router.get('/find', async (req, res) => {
 })
 
 // get by location
-router.get(':location', async (req, res) => {
+router.get('/:location', async (req, res) => {
     const { location } = req.params;
 
     try {

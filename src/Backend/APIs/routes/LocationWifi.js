@@ -3,7 +3,34 @@ const router = require('express').Router();
 const mongoose = require('mongoose');
 const locationRf = require('../models/LocationRF.js');
 
+
 router.get('/:id', async (req, res) => {
+    const id = req.params.id;
+    //const buz = req.body.buzer
+
+    try {
+        const getId = await locationRf.findOne({ _id: id });
+        res.status(200).json(getId);
+        }
+
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
+router.get('/', async (req, res) => {
+
+    try {
+        const wifiAll = await locationRf.find();
+        res.status(200).json(wifiAll);
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
+
+router.get('/buzer/:id', async (req, res) => {
     const id = req.params.id;
     //const buz = req.body.buzer
 
@@ -26,7 +53,7 @@ router.get('/:id', async (req, res) => {
 
 
 
-router.patch('/:id', async (req, res) => {
+router.patch('/buzer/:id', async (req, res) => {
     const id = req.params.id;
     const { modelo, localizacao, rec, data, buzer } = req.body;
     const buz = { modelo:modelo, localizacao:localizacao, rec:rec, data:data, buzer };
