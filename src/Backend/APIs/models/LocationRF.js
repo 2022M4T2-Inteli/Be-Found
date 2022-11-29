@@ -3,9 +3,18 @@ var moment = require('moment');
 moment.locale("pt-br");
 
 const locationRf = mongoose.model('locationRf',{
-    modelo:String,
-    localizacao:String,
-    rec:String,
+    modelo:{
+        type: String,
+        default: "Indefinido",
+    },
+    localizacao:{
+        type: String,
+        default: "Indefinido",
+    },
+    rec:{
+        type: String,
+        default: "Indefinido",
+    },
     timestamp:{type: String,
         default: () => moment().format('L')
     },
