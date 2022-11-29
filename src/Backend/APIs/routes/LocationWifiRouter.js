@@ -55,17 +55,28 @@ router.get('/buzer/:id', async (req, res) => {
 //Post new device
 router.post('/', async (req, res) => {
 
-    const { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp} = req.body;
-    const location = { 
+    const { 
         modelo, 
-        localizacao, 
+        loc, 
+        locAnterior, 
         rec, 
-        timestamp, 
-        buzer, 
         version, 
         beaconP, 
-        idd, 
-        idp
+        status, 
+        custody, 
+        register
+    } = req.body;
+    
+    const location = { 
+        modelo, 
+        loc,
+        locAnterior, 
+        rec, 
+        version, 
+        beaconP, 
+        status, 
+        custody,
+        register,
     };
     console.log(req.body);
 
@@ -86,17 +97,35 @@ router.post('/', async (req, res) => {
 //Patch buzer status by id
 router.patch('/buzer/:id', async (req, res) => {
     const id = req.params.id;
-    const { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp} = req.body;
+    
+    const { 
+        modelo, 
+        loc, 
+        locAnteiror, 
+        rec, 
+        timestamp, 
+        buzer,
+        perm, 
+        version, 
+        beaconP, 
+        status, 
+        custody, 
+        register
+    } = req.body;
+    
     const buz = { 
         modelo:modelo, 
-        localizacao:localizacao, 
+        loc:loc,
+        locAnteiror:locAnteiror, 
         rec:rec, 
         timestamp:timestamp, 
-        buzer, version:version, 
+        buzer,
+        perm:perm,
+        version:version, 
         beaconP:beaconP, 
-        idd:idd, 
-        idp:idp,
-        buzer
+        status:status, 
+        custody:custody,
+        register:register,
     };
 
     // const buz = buzer;
@@ -116,8 +145,34 @@ router.patch('/buzer/:id', async (req, res) => {
 
 router.patch('/:id', async (req, res) => {
     const id = req.params.id;
-    const { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp} = req.body;
-    const all = { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp}
+    
+    const { 
+        modelo, 
+        loc, 
+        locAnteiror, 
+        rec, 
+        timestamp, 
+        buzer, 
+        version, 
+        beaconP, 
+        status, 
+        custody, 
+        register
+    } = req.body;
+    
+    const all = { 
+        modelo, 
+        loc, 
+        locAnteiror, 
+        rec, 
+        timestamp, 
+        buzer, 
+        version, 
+        beaconP, 
+        status, 
+        custody, 
+        register
+    };
     // const buz = buzer;
     try {
         const updateLoc = await locationWifi.updateOne({ _id: id }, all);

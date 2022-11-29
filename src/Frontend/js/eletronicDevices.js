@@ -17,7 +17,7 @@ console.log("teste");
 const getDevices = () => {
     $.ajax({
         async: true,
-        url: "http://127.0.0.1:5500/rfid/find",
+        url: "http://127.0.0.1:5500/wifi/",
         type: 'GET',
         success: data => {
             data.forEach(element => {
@@ -65,7 +65,7 @@ function deviceDetail(id) {
 
     console.log("BUCETAAAAA");
     $.ajax({
-        url: "http://127.0.0.1:5500/rfid/find",
+        url: "http://127.0.0.1:5500/wifi/",
         type: 'GET',
         success: data => {
             data.forEach(element => {
@@ -211,7 +211,7 @@ function editInfos(id) {
 function disableField(n, id) {
     var inputs = document.getElementsByName(id);
     const editInput = {
-        "url": `http://127.0.0.1:5500/rfid/${id}`,
+        "url": `http://127.0.0.1:5500/wifi/${id}`,
         "method": "PATCH",
         "timeout": 0,
         "data": {
