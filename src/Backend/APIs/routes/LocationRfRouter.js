@@ -9,6 +9,11 @@ router.get('/find', async (req, res) => {
 
     try {
         const rfidLoc = await locationRf.find();
+        if (!rfidLoc) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+
+        }
         res.status(200).json(rfidLoc);
     }
     catch (error) {

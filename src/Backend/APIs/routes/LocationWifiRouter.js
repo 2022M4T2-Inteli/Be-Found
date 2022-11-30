@@ -10,6 +10,11 @@ router.get('/:id', async (req, res) => {
 
     try {
         const getId = await locationWifi.findOne({ _id: id });
+        if (!getId) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+
+        }
         res.status(200).json(getId);
         }
 
@@ -23,6 +28,11 @@ router.get('/', async (req, res) => {
 
     try {
         const wifiAll = await locationWifi.find();
+        if (!wifiAll) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+
+        }
         res.status(200).json(wifiAll);
     }
     catch (error) {
