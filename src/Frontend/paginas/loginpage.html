@@ -10,7 +10,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <div id= "backgroundlogin">
@@ -22,21 +22,18 @@
         </div>
         <div class="logincenter">
             <h1>Login</h1>
-            <form method="get" action="/teste2">
-
                 <div class="txt_field d-flex justify-content-center" >
-                    <input class="txt" type="text" placeholder="Email" required>
+                    <input class="txt" type="text" placeholder="Email" id="email" required>
                     <label>Email</label>
                 </div>
 
                 <div class="txt_field d-flex justify-content-center">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Password" id="senha" required>
                     <label>Password</label>
                 </div>
 
                 <div class="pass">Forgot Password?</div>
-                <input type="submit" value="Login" class="loginbutton">
-            </form>
+                <input type="submit" value="Login" class="loginbutton" onclick="login()">
             <br>
             <div id="h7dont">
                 <h7>Don't have an account yet?</h7>
@@ -63,5 +60,6 @@
         </div>
             <!--Waves end-->
     </div>
+    <script src = "../js/login.js"></script>
 </body>
 </html>
