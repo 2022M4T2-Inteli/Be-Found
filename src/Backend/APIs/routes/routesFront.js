@@ -10,9 +10,6 @@ const path = require('path');
   router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../../../Frontend/paginas/loginpage.html"));
   });
-  router.get("/naoeletronicos", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/naoeletronicos.html"));
-  });
   router.get("/paginaInicial", (req, res) => {
     res.sendFile(path.join(__dirname, "../../../Frontend/paginas/paginaInicial.html"));
   });
