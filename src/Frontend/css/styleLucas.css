@@ -186,6 +186,10 @@ nav div{
     border-radius: 10px;
 }
 
+.botaoNaoEletronico{
+    transform: rotate(180deg);
+}
+
 .botaoDisp{
     margin: 10px 0px 10px 13px;
 }
