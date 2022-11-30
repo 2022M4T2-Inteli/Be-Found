@@ -48,6 +48,10 @@ app.use('/wifi',wifiRoutes)
 const roomRoutes = require('./routes/roomsRouter.js')
 app.use('/room',roomRoutes)
 
+//Registration
+const authRoute = require('./routes/auth.js');
+app.use('/log', authRoute);
+
 // Access CORS
 const cors = require("cors");
 app.use(
