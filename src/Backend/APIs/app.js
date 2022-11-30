@@ -44,6 +44,10 @@ app.use('/rfid', RfRoutes);
 const wifiRoutes = require('./routes/LocationWifiRouter.js')
 app.use('/wifi',wifiRoutes)
 
+// routes room
+const roomRoutes = require('./routes/roomsRouter.js')
+app.use('/room',roomRoutes)
+
 // Access CORS
 const cors = require("cors");
 app.use(
