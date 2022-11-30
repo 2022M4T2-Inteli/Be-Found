@@ -29,12 +29,35 @@ const login = (req, res, next) => {
 
     User.findOne({email:username})
     .then(user => {
-        bcrypt.compare(password, user.password, function(err, result){
-            
-        })
+        if(user){
+            bcrypt.compare(password, user.password, function(err, result){
+                if(err){
+                    res.json({
+                        error:err
+                    })
+                }
+                if(result){
+                    //let token = jwt.sign({email: user.email})
+                    res.json({
+                        message: "Login successful!",
+                        //token
+                    })
+                }else{
+                    res.json({
+                        message: "Password does not match!"
+                    })
+                }
+            })
+        }else{
+            res.json({
+                message: "No user found!"
+            })
+        }
+        
     })
 }
 
 module.exports = {
-    register
+    register,
+    login
 }
