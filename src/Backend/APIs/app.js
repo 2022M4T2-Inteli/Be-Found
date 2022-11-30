@@ -1,11 +1,12 @@
-// login database
-//login: joaoalca
-//senha: joaoalca123
 
 // initial imports
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
 
 //Ports
 const PORT = 5500;
@@ -58,7 +59,7 @@ app.use(
 //Host and db connect
 mongoose
     .connect(
-        'mongodb+srv://joaoalca:joaoalca123@apicluster.ldpol3f.mongodb.net/bancodaapi?retryWrites=true&w=majority'
+        `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster.ldpol3f.mongodb.net/bancodaapi?retryWrites=true&w=majority`
         )
     .then(
         ()=>{
