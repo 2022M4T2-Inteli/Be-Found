@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
+
 const DB_USER = process.env.DB_USER;
 const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
 
@@ -43,6 +44,12 @@ app.use('/rfid', RfRoutes);
 // routes Wifi
 const wifiRoutes = require('./routes/LocationWifiRouter.js')
 app.use('/wifi',wifiRoutes)
+
+//Registration
+const authRoute = require('./routes/auth.js');
+app.use('/log', authRoute);
+
+
 
 // Access CORS
 const cors = require("cors");
