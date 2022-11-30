@@ -32,4 +32,4 @@
 *.app
 
 
-./src/Backend/APIS/.env
+*.env
