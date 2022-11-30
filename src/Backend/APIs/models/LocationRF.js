@@ -3,15 +3,11 @@ var moment = require('moment');
 moment.locale("pt-br");
 
 const locationRf = mongoose.model('locationRf',{
-    modelo:{
+    modelo:{ //Tipo de Objeto
         type: String,
         default: "Indefinido",
     },
-    localizacao:{
-        type: String,
-        default: "Indefinido",
-    },
-    beaconP:{
+    beaconP:{ //Número - Beacon Patrimônio 
         type: String,
         default: "Indefinido",
     },
