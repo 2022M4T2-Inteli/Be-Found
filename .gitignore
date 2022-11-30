@@ -1,3 +1,6 @@
+.env
+
+
 # Prerequisites
 *.d
 
@@ -32,4 +35,3 @@
 *.app
 
 
-.env
