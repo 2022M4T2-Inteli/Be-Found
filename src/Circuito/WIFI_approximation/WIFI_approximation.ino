@@ -14,8 +14,8 @@ void first(){
   WiFi.mode(WIFI_STA);
 
   // Definição das redes que ele vai se conectar
-  wifiMulti.addAP("BRUNOO", "CLARINHA1234");
-  wifiMulti.addAP("CLARINHA", "CLARINHA123");
+  wifiMulti.addAP("Sala 02");
+  wifiMulti.addAP("Sala 03");
   
 
   // WiFi.scanNetworks retorna o número de redes encontradas
