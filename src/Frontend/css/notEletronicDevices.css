@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F7FA;;
+}
+
+.sidebar{
+    z-index: 2;
+    width: 8.22%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 3px 4px 45px rgba(0, 0, 0, 0.08);
+    position: fixed;
+}
+
+.sidebar a svg{
+    margin-top: 25%;
+    width: 22px;
+    height: 22px;
+    color: #000000;
+}
+
+.sidebar a img{
+    margin-top: 25%;
+    width: 22px;
+    height: 22px;
+}
+
+.sidebar a{
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 35px;
+    width: 55px;
+    height: 55px;
+}
+
+.sidebar a svg:hover{
+    color: #0370AB;
+    background-color: #EEFBFF;
+}
+.sidebar a:hover{
+    color: #0370AB;
+
+    background-color: #EEFBFF;
+    border-radius: 100%;
+}
+
+.sidebar a{
+    border-radius: 100%;
+}
+
+nav div{
+    position: relative;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 5% auto auto auto;
+}
+
+#divLogo{
+    position: static;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#logo{
+    width: 80px;
+    height: 91px;
+    margin-left: 12px;
+}
+
+#navbar{
+    background-color: white;
+    position: fixed;
+    height: 12%;
+    width: 100%;
+    z-index: 1;
+}
+
+#nomeMapa{
+    margin-left: 11%;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+
+}
+
+#nomePerfil{
+    margin-left: 55%;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#fotoPerfil{
+    border-radius: 100%;
+    height: 50px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#iconeSeta{
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+#iconeMapa{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+/* PAGINA DISPOSITIVOS ELETRONICOS */
+
+.containerr{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 0.3fr 0.3fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 25px 30px 95px 1.0fr 1.0fr;
+    grid-template-areas: 
+                        "sidebar navbar navbar navbar navbar"
+                        "sidebar filter filter filter filter"
+                        "sidebar filter filter filter filter"
+                        "sidebar list list list list"
+                        "sidebar list list list list"
+                        "sidebar list list list list";
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+#sideBar{
+    background-color: #01939F;
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#navBar{
+    background-color: #ffffff;
+    grid-area: navbar;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#filter{
+    background-color: #F6F7FA;;
+    grid-area: filter;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+}
+
+#list{
+    background-color: #F6F7FA;;
+    grid-area: list;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    height: 100%;
+}
+
+/* Filter */
+
+.filterFurniture{
+    display: flex;
+    justify-content: end;
+    margin-right: 39px;
+    margin-left: 110px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.filterFurniture h5{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.filterButton{
+    border: none;
+    background-color: #F6F7FA;
+}
+
+.buttonFilter{
+    background-color: #F6F7FA;
+    border: none;
+    z-index: 0;
+}
+
+.dropdown{
+    padding-top: 6px;
+}
+.dropdown button{
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown h5{
+    font-family: 'Inter', sans-serif ;font-size: 14px;
+    text-align: center;
+    color: #0370AB;
+}
+
+.dropdown-menu button{
+    font-family: 'Inter', sans-serif ;font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+.dropdown-menu button:hover{
+    color: #0370AB;
+    font-weight: bold;
+}
+
+.dropdown-menu button:focus{
+    color: white;
+    font-weight: bold;
+}
+
+/* Cards */
+
+.rowFurniture{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rowFurnitureDown{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.cardDevicess{
+    width: 320px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 70px rgba(0, 0, 0, 0.1));
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cardText{
+    position: absolute;
+    bottom: 0;
+}
+
+.cardImage{
+    position: absolute;
+    top: 0;
+    margin-top: 8px;
+    width: 70%;
+    height: 75%;
+}
+
+.cardImage img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.buttonCard{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+/* Modal Content */
+.modal-contentt {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 55%;
+    height: 85%;
+    /* position: unset;
+    display: flex;
+    flex-direction: column; */
+    border-radius: 10px;
+}
+
+.modal h4{
+    margin: 0;
+}
+
+.topContent{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin-left: auto;
+    margin-top: 5px;
+}
+
+.closeButton{
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.closeButton img{
+    width: 30px;
+    height: 30px;
+}
+  

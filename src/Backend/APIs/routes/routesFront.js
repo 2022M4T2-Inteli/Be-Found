@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const path = require('path');
 
-  router.get("/devicess", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/devicess.html"));
+  router.get("/notEletronicDevices", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/notEletronicDevices.html"));
   });
   router.get("/infoDevice", (req, res) => {
     res.sendFile(path.join(__dirname, "../../../Frontend/paginas/infoDevice.html"));

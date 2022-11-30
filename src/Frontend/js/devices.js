@@ -1,10 +1,15 @@
-$('span').click(function(event) {
-    if(event.target.tagName === 'SPAN') {
-        alert('span pressed!');
-    }
- });
+var modal = document.getElementById("myModal");
 
-$('#btnselect').click(function(e) {
-    $("#optionSelect").removeClass("optionSelect");
-    $('#optionSelect').attr('size', $('option').length);
-});
+function teste(){
+    modal.style.display = "block";
+}
+
+function closeModal(){
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
