@@ -1,0 +1,262 @@
+html, body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #F6F7FA;;
+}
+
+.containerHome{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 75px 200px 200px 200px 75px;
+    grid-template-areas: 
+                        "sidebar navbar navbar navbar navbar"
+                        "sidebar titleMap titleMap buttonObj search"
+                        "sidebar map map map map"
+                        "sidebar map map map map"
+                        "sidebar map map map map"
+                        "sidebar devices devices devices devices";
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#navBar{
+    background-color: #01939F;
+    grid-area: sidebar;
+}
+
+#sideBar{
+    background-color: #01939F;
+    grid-area: navbar;
+}
+
+#titleMap{
+    border-top-left-radius: 15px;
+    margin: 20px 0px 0px 15px;
+    background-color: #efefef;
+    grid-area: titleMap;
+}
+
+#buttonObj{
+    margin: 20px 0px 0px 0px;
+    background-color: #efefef;
+    grid-area: buttonObj;
+}
+
+#search{
+    border-top-right-radius: 15px;
+    margin: 20px 15px 0px 0px;
+    background-color: #efefef;
+    grid-area: search;
+}
+
+#map{
+    margin: 0px 15px 0px 15px;
+    background-color: #efefef;
+    grid-area: map;
+}
+
+#devices{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 10px;
+    margin: 0px 15px 15px 15px;
+    background-color: #efefef;
+    grid-area: devices;
+}
+
+/*---------------------*/
+/*---------------------*/
+/*---------------------*/
+
+/*SECÃO - TITLE MAP*/
+
+#tituloMapa{
+    margin-top: 10px;
+    color: #0370AB;
+    font-weight: 700;
+    text-align: left;
+    font-size: 25px;
+    display: inline-flex;
+}
+
+#titleMap svg{
+    margin: 12px;
+    width: 22px; /*22px*/
+    height: 22px; /*22px*/
+    color: #000000;
+    display: inline-flex;
+    margin-right: 50%;
+}
+
+/*SECÃO - BUTTON OBJ*/
+
+#buttonObj svg{
+    margin: 12px;
+    width: 22px; /*22px*/
+    height: 22px; /*22px*/
+    color: #000000;
+}
+
+#buttonObj div{
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+
+/*SECÃO - SEARCH*/
+
+#pesquisa{
+    margin-top: 9px;
+    width: 95%;
+}
+
+#pesquisar{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-right: #ffffff;
+}
+
+#barraPesquisa{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #ffffff;
+    border-left: #ffffff;
+}
+
+/*SECÃO - MAP*/
+
+#mapCampus{
+    border: 3px solid #CFCFCF;
+    border-radius: 20px;
+    margin-top: 15px;
+    width: 83%;
+}
+
+.containerHome{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 75px 200px 200px 200px 75px;
+    grid-template-areas: 
+                        "sidebar navbar navbar navbar navbar"
+                        "sidebar titleMap titleMap buttonObj search"
+                        "sidebar map map map map"
+                        "sidebar map map map map"
+                        "sidebar map map map map"
+                        "sidebar devices devices devices devices";
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+/*SECÃO - DEVICES*/
+
+.botaoDisp{
+    margin: 10px 0px 10px 13px;
+}
+
+.botaoDisp button{
+    color: #ffffff;
+    border: 0px;
+    width: 120px;
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.corRosa{
+    background-color: #FF548F;
+}
+
+.corVerde{
+    background-color: #19B69B;
+}
+
+.corRoxo{
+    background-color: #9061C2;
+}
+
+.corAzulEscuro{
+    background-color: #02779E;
+}
+
+.corAzulClaro{
+    background-color: #63D3FF;
+}
+
+
+
+
+
+
+
+
+
+
+.dropbtn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover{
+      background-color: #f1f1f1;
+      border-radius: 10px;
+    }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+  }
+
+.dropdown-content h5{
+    font-size: 14px;
+    text-align: center;    
+    color: #0370AB;
+}
+
+.dropdown-content a{
+    font-size: 14px;
+    text-align: center;    
+    color: #374151;
+    letter-spacing: 0.01em;
+}
+
+.dropdown-content a:hover{
+    color: #0370AB;
+    font-weight: bold;
+}
