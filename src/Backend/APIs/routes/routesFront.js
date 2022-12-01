@@ -28,5 +28,11 @@ const path = require('path');
   router.get("/mapNotEletronic", (req, res) => {
     res.sendFile(path.join(__dirname, "../../../Frontend/paginas/mapNotEletronic.html"));
   });
+  router.get("/notEletronicMapteste", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/notEletronicMapteste.html"));
+  });
+  router.get("/home2", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/home2.html"));
+  });
 
 module.exports = router;

@@ -3,7 +3,11 @@ var moment = require('moment');
 moment.locale("pt-br");
 
 const roomRfid = mongoose.model('RoomRfid',{
-    infoCard:{
+    iCardModel:{
+        type: String,
+        default: "Indefinido",
+    },
+    iCardBeaP:{
         type: String,
         default: "Indefinido",
     },
@@ -14,6 +18,10 @@ const roomRfid = mongoose.model('RoomRfid',{
     nameRoom:{
         type: String,
         default: "Indefinido",
+    },
+    qutn:{
+        type: Number,
+        default: 0,
     },
 })
 

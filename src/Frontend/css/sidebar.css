@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.sidebar a svg{
+    margin-top: 25%;
+    width: 90%;
+    height: 90%;
+    color: #000000;
+}
+
+.sidebar a img{
+    margin-top: 25%;
+    width: 90%;
+    height: 90%;
+}
+
+.sidebar a{
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 51%;
+    width: 55px;
+    height: 55px;
+}
+
+.sidebar a svg:hover{
+    color: #01929f;
+    background-color: #EEFBFF;
+}
+.sidebar a:hover{
+    color: #01929f79;
+    background-color: #EEFBFF;
+    border-radius: 100%;
+}
+
+.sidebar a{
+    border-radius: 100%;
+}
+
+nav div{
+    position: relative;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 5% auto auto auto;
+}
+
+#divLogo{
+    position: static;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#logo{
+    width: 80px;
+    height: 91px;
+    margin-left: 12px;
+}
+
+#nomePagina{
+    margin-left: 2%;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
+#nomePerfil{
+    margin-left: 55%;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+/* #iconeSeta{
+} */
+
+#iconeMapa{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+/* COM GRID AQUI*/
+
+.containerr{
+    background-color: red;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+                        "sidebar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio"
+                        "sidebar vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio vazio";
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+.sidebar{
+    background-color: #01939F;
+    grid-area: sidebar;
+    box-shadow: 3px 4px 45px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.navbar{
+    background-color: #ffffff;
+    grid-area: navbar;
+    position: relative;
+
+}
