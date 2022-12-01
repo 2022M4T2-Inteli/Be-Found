@@ -23,7 +23,7 @@ function bttnCard(id){
             <div class="textDevices">
                 <div>
                     <span class="tittleRoom"><p><b>${element.nameRoom}</b></p></span>
-                    <p class="pQtnd">Quantidade: ${element.qutn}</p>
+                    <p class="pQtnd">Quantidade: 34</p>
                 </div>
             </div>
             <div class="imgCategoryDevice">

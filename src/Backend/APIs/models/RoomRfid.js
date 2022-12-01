@@ -19,10 +19,6 @@ const roomRfid = mongoose.model('RoomRfid',{
         type: String,
         default: "Indefinido",
     },
-    qutn:{
-        type: Number,
-        default: 0,
-    },
 })
 
 module.exports = roomRfid;
