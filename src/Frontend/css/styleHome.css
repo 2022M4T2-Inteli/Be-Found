@@ -109,6 +109,10 @@ html, body{
     margin-right: 15px;
 }
 
+#buttonswitch {
+    transform: rotate(180deg);
+}
+
 /*SECÃO - SEARCH*/
 
 #pesquisa{
