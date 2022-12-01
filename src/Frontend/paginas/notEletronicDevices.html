@@ -14,14 +14,26 @@
 </head>
 <body>
     <div class="containerr">
-        <div id="myModal" class="modal">
+        <div id="myModall" class="modall">
             <div class="modal-contentt">
               <div class="topContent">
-                <h4>Cadeiras por salas</h4>
-                <button class="closeButton" onclick="closeModal()"><img src="../imagens/closeButton.png" alt=""></button>
+                <h4 id="top1"></h4>
+                <button id="top2" class="closeButton" onclick="closeModal()"><img src="../imagens/xCloseButton.png" alt=""></button>
+              </div>
+              <div class="middleContent" id="geralatv">
               </div>
             </div>
-          </div>
+        </div>
+        <div id="myModall2" class="modall">
+            <div class="modal-contentt">
+              <div class="topContent">
+                <h4 id="top12"></h4>
+                <button id="top22" class="closeButton" onclick="closeModal2()"><img src="../imagens/xCloseButton.png" alt=""></button>
+              </div>
+              <div class="middleContent" id="geralatv2">
+              </div>
+            </div>
+        </div>
         <nav class="nav sidebar">
             <div id="divLogo">
                 <img id="logo" src="../imagens/logo.png">
@@ -49,7 +61,6 @@
         </nav>
         <nav class="nav justify-content" id="navbar" style="background-color: white;">
             <h6 id="nomeMapa">Dispositivos não eletrônicos</h6>
-            
             <h6 id="nomePerfil">Laís Carvalho</h6>
             <img id="fotoPerfil" src="../imagens/fotoPerfil.png">
             <svg id="iconeSeta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /></svg>
@@ -72,19 +83,19 @@
         </section>
         <section id="list">
             <div class="rowFurniture">
-                <button onclick="teste()" class="buttonCard">
+                <button onclick="bttnCard(0)" class="buttonCard">
                     <div class="cardDevicess">
                         <div class="cardImage"><img src="../imagens/Chair.png" alt=""></div>
                         <div class="cardText"><h4>Cadeiras</h4></div>
                     </div>
                 </button>
-                <button class="buttonCard">
+                <button onclick="bttnCard(1)" class="buttonCard">
                     <div class="cardDevicess">
                         <div class="cardImage"><img src="../imagens/wheelChair.png" alt=""></div>
                         <div class="cardText"><h4>Cadeiras com rodas</h4></div>
                     </div>
                 </button>
-                <button class="buttonCard">
+                <button onclick="bttnCard(2)" class="buttonCard">
                     <div class="cardDevicess">
                         <div class="cardImage"><img src="../imagens/whiteBoard.png" alt=""></div>
                         <div class="cardText"><h4>Quadro branco</h4></div>
@@ -92,19 +103,19 @@
                 </button>
             </div>
             <div class="rowFurnitureDown">
-                <button class="buttonCard">
+                <button onclick="bttnCard(3)" class="buttonCard">
                     <div class="cardDevicess">
                         <div class="cardImage"><img src="../imagens/guitar.png" alt=""></div>
                         <div class="cardText"><h4>Violão</h4></div>
                     </div>
                 </button>
-                <button class="buttonCard">
+                <button onclick="bttnCard(4)" class="buttonCard">
                     <div class="cardDevicess">
                         <div class="cardImage"><img src="../imagens/violin.png" alt=""></div>
                         <div class="cardText"><h4>Violino</h4></div>
                     </div>
                 </button>
-                <button class="buttonCard">
+                <button onclick="bttnCard(5)" class="buttonCard">
                     <div class="cardDevicess">
                         <div class="cardImage"><img src="../imagens/flute.png" alt=""></div>
                         <div class="cardText"><h4>Flauta</h4></div>

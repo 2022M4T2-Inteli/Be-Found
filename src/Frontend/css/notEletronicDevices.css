@@ -132,6 +132,7 @@ nav div{
                         "sidebar list list list list";
     color: rgb(0, 0, 0);
     text-align: center;
+    font-family: 'Inter', sans-serif ;
 }
 
 
@@ -272,13 +273,13 @@ nav div{
     border: none;
 }
 
-.modal {
+.modall {
     display: none;
     position: fixed;
     z-index: 3;
-    padding-top: 100px;
     left: 0;
     top: 0;
+    padding-top: 70px;
     width: 100%;
     height: 100%; 
     overflow: auto;
@@ -292,24 +293,25 @@ nav div{
     margin: auto;
     border: 1px solid #888;
     width: 55%;
-    height: 85%;
-    /* position: unset;
-    display: flex;
-    flex-direction: column; */
+    min-height: 85%;
     border-radius: 10px;
 }
 
-.modal h4{
+.modall h4{
     margin: 0;
 }
 
 .topContent{
-    position: relative;
+    /* position: relative; */
     display: flex;
-    justify-content: space-around;
-    width: 75%;
+    justify-content: center;
+    width: 100%;
     margin-left: auto;
-    margin-top: 5px;
+}
+
+#top2{
+    padding-left:auto;
+    padding-right: auto;
 }
 
 .closeButton{
@@ -320,7 +322,94 @@ nav div{
 }
 
 .closeButton img{
-    width: 30px;
-    height: 30px;
+    width: 21px;
+    height: 21px;
 }
-  
+
+.middleContent{
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.infoButtonn{
+    color: #0370AB;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.devices{
+    width: 100%;
+    height: 12.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin: 0;
+    justify-content: space-between;
+    line-height: 15px;
+    margin-bottom: 13px;
+}
+
+.textDevices{
+    text-align: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.textDevices p {
+    margin: 0;
+}
+
+.tittleRoom{
+    color: black;
+    font-size: 14px;
+
+}
+
+.pQtnd{
+    font-size: 12px;
+}
+
+
+.topContent h4{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 58px;
+}
+
+.imgCategoryDevice{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.textCategory{
+    font-family: 'Inter', sans-serif ;font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+    width: 76px;
+    height: 21px;
+    background: #231F20;
+    border-radius: 100px;
+    margin-left: 1vh;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textCategory p {
+    margin: 0;
+}
+
+.textpatri{
+    color: #0370AB;
+}
