@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    getAtv();
+    getDevices();
 });
 
 function cleanInfos(){
@@ -26,7 +26,7 @@ var idFilter = 0;
 var activeFilter = false;
 
 
-const getAtv = () => {
+const getDevices = () => {
     var ndev = 0;
     $.ajax({
         async: true,
