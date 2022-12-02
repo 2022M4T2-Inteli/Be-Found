@@ -11,7 +11,7 @@ const path = require('path');
     res.sendFile(path.join(__dirname, "../../../Frontend/paginas/loginpage.html"));
   });
   router.get("/paginaInicial", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/paginaInicial.html"));
+    res.sendFile(path.join(__dirname, "../../../Frontend/paginas/home.html"));
   });
   router.get("/requestlogin", (req, res) => {
     res.sendFile(path.join(__dirname, "../../../Frontend/paginas/requestlogin.html"));
