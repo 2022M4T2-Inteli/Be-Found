@@ -1,46 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 html, body{
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-    /* height: 100%; */
-    /* width: 100%; */
+    height: 100%;
+    width: 100%;
 }
 
 .sidebar a svg{
-    margin-top: 25%;
-    width: 90%;
-    height: 90%;
-    color: #000000;
-}
-
-.sidebar a img{
-    margin-top: 25%;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 }
 
 .sidebar a{
-    text-align: center;
-    margin-top: 6px;
     margin-bottom: 51%;
     width: 55px;
     height: 55px;
+    color: #000000;
 }
 
-.sidebar a svg:hover{
-    color: #01929f;
-    background-color: #EEFBFF;
-}
 .sidebar a:hover{
-    color: #01929f79;
-    background-color: #EEFBFF;
-    border-radius: 100%;
+    color: #01939F;;
 }
 
-.sidebar a{
+.sideicones:hover{
+    background-color: #01929f34;
     border-radius: 100%;
 }
 
@@ -52,45 +38,69 @@ nav div{
 }
 
 #divLogo{
-    position: static;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
     margin: 0;
     text-align: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #logo{
     width: 80px;
     height: 91px;
-    margin-left: 12px;
+    /* margin-left: 15%; */
+    text-align: center;
 }
 
 #nomePagina{
     margin-left: 2%;
     text-align: center;
-    margin-top: 25px;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    font-family: 'Abel', sans-serif;
+    font-weight:normal;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #nomePerfil{
-    margin-left: 55%;
-    margin-top: 25px;
+    position:absolute;
+    margin-left: 85%;
     font-size: 15px;
+    font-family: 'Abel', sans-serif;
+    font-weight:normal;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-right: auto; */
 }
 
-/* #iconeSeta{
-} */
+#iconeSeta{
+    border: none;
+    background: none;
+    margin-bottom: auto;
+    margin-top: auto;
+    
+}
 
 #iconeMapa{
     margin-top: 30px;
     margin-left: 60px;
 }
 
+#ezoffice{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 /* COM GRID AQUI*/
 
 .containerr{
-    background-color: red;
+    background-color: #ff0000;
     display: grid;
     height: 100%;
     width: 100%;
@@ -111,15 +121,18 @@ nav div{
 
 
 .sidebar{
-    background-color: #01939F;
+    background-color: #ffffff;
     grid-area: sidebar;
     box-shadow: 3px 4px 45px rgba(0, 0, 0, 0.08);
     position: relative;
+    z-index: 2;
 }
 
 .navbar{
     background-color: #ffffff;
     grid-area: navbar;
     position: relative;
+    z-index: 1;
+    /* text-align: center; */
 
 }
