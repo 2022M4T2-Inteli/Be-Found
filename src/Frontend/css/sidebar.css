@@ -72,15 +72,26 @@ nav div{
     font-weight:normal;
     margin-top: auto;
     margin-bottom: auto;
-    /* margin-right: auto; */
 }
 
 #iconeSeta{
+    /* display: flex; */
+    position: absolute;
     border: none;
-    background: none;
-    margin-bottom: auto;
+    background:none;
     margin-top: auto;
-    
+    margin-bottom: auto;
+    margin-left: 92%;
+}
+
+#setinha{
+    background: #01939F;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #iconeMapa{
@@ -100,7 +111,7 @@ nav div{
 /* COM GRID AQUI*/
 
 .containerr{
-    background-color: #ff0000;
+    background-color:#f3f3f3;
     display: grid;
     height: 100%;
     width: 100%;
