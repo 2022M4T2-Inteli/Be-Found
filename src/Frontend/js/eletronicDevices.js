@@ -98,7 +98,9 @@ const getDevices = () => {
 
 
 function deviceDetail(id) {
-    bttnPags.disabled = false;
+    for(i = 0; i <= 2; i++){
+        bttnPags[i].disabled = false;
+    }
     // Div para conter os botoes do buzzer e de opções
     addInputdiv.innerHTML = "";
     const divButtonsTop = document.createElement("div");
