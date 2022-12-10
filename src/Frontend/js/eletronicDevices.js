@@ -319,6 +319,7 @@ function pagInfo(){
     tittleee.innerHTML = "";
     tittleee.innerHTML = elementStatus;
     infoo.innerHTML = "";
+    deviceDetail(idperimeter);
 }
 
 function pagHist(){
@@ -330,7 +331,6 @@ function pagHist(){
     elementPag2.style.setProperty('border', '1px solid #0370AB');
     elementPag3.style.setProperty('color', 'initial');
     elementPag3.style.setProperty('border', 'initial');
-
     eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside info info info""sidebar aside info info info""sidebar aside info info info"');
     tittleee.innerHTML = "";
     infoo.innerHTML = "";
