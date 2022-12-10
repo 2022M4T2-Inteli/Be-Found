@@ -6,7 +6,7 @@ function login(){
     console.log(e_mail, password)
 
     $.ajax({
-        url: "http://127.0.0.1:5500/log/login",
+        url: "/log/login",
         type: 'POST',
         data: {
             username: e_mail, password: password
