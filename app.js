@@ -10,7 +10,6 @@ const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD);
 
 //Ports
 const PORT = 5500;
-const hostname = '127.0.0.1:';
 
 //JSON read
 app.use(
@@ -73,7 +72,7 @@ mongoose
         ()=>{
             console.log("Conectado ao banco")
             app.listen(PORT, () => {
-                console.log(`Page server running at http://${hostname}${PORT}/`);
+                console.log(`Page server running at http://${PORT}/`);
               });
         }
     )
