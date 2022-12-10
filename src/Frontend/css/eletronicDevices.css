@@ -363,8 +363,50 @@ nav div{
     border-radius: 100px;
     padding-left: 2vh;
     padding-right: 2vh;
+    margin-right: 2vh;
 }
 
+#pageTwo {
+    color: #0370AB;
+    box-sizing: border-box;
+    border: 1px solid #0370AB;
+    border-radius: 100px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin-right: 2vh;
+}
+
+#pageThree {
+    color: #0370AB;
+    box-sizing: border-box;
+    border: 1px solid #0370AB;
+    border-radius: 100px;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin-right: 2vh;
+}
+
+.bttnPagNav{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.perimeterDiv{
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    width: 93%;
+    margin: auto;
+    height: 95%;
+    align-items: center;
+}
+
+.contentPerimeter {
+    width: 100%;
+    align-items: center; 
+}
 /* Tittle device page */
 
 .tittleDevices{

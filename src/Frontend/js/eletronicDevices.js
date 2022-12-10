@@ -1,5 +1,10 @@
 $(document).ready(() => {
     getDevices();
+    elementPag2.style.setProperty('color', 'initial');
+    elementPag2.style.setProperty('border', 'initial');
+    elementPag3.style.setProperty('color', 'initial');
+    elementPag3.style.setProperty('border', 'initial');
+    tittlePag.innerHTML = "Informações Gerais";
 });
 
 function cleanInfos(){
@@ -12,6 +17,44 @@ function cleanInfos(){
     geralDevices.innerHTML = "";
 }
 
+const perimeterr = `
+<div class="perimeterDiv">
+    <div class="contentPerimeter">
+        <img src="../imagens/safePerimeter.png" width="80px" alt="">
+        <h5>Esse dispositivo não tem histórico de saídas</h5>
+    </div>
+</div>
+`;
+const elementStatus = `
+<div class="cardStatusDevice">
+    <div id="lastLocation" class="imgInfo">
+        <img class="currentLocation" src="../imagens/currentLocation.png" alt="">
+        <p class="spaceTextDevice">Localização atual:</p>
+        <p id="currentLocDev" class="lastInfoDev"></p>
+    </div>
+</div>
+<div class="cardStatusDevice">
+    <div class="imgInfo">
+        <img class="lastLocation" src="../imagens/lastLocation.png" alt="">
+        <p class="spaceTextDevice">Ultima localização:</p>
+        <p id="lastLocDev" class="lastInfoDev"></p>
+    </div>
+</div>
+<div class="cardStatusDevice">
+    <div class="imgInfo" id="divinfoperi">
+        <img class="perimeterLocation" src="../imagens/perimeterSchool.png" alt="">
+        <p class="spaceTextDevice">Perimêtro Escolar:</p>
+    </div>
+</div>
+`;
+const infoo = document.getElementById("info");
+const tittleee = document.getElementById("titleDevices");
+const eletronicDev = document.getElementById("allcontainer");
+const tittlePag = document.getElementById("tittleNavPag");
+const bttnPags = document.getElementsByClassName("bttnPagNav")
+const elementPag1 = document.getElementById("pageOne");
+const elementPag2 = document.getElementById("pageTwo");
+const elementPag3 = document.getElementById("pageThree");
 const geralDevices = document.querySelector("#geralDevices");
 const lastLocation = document.querySelector("#lastLocation");
 const register = document.querySelector("#registerData");
@@ -20,7 +63,7 @@ const addperdiv = document.querySelector("#divinfoperi");
 const imgPer = document.createElement("img");
 imgPer.classList.add('perimeterGreen');
 imgPer.setAttribute("src", "../imagens/perimeterRigth.png");
-
+var idperimeter;
 var aux = 0;
 var idFilter = 0;
 var activeFilter = false;
@@ -63,6 +106,7 @@ const getDevices = () => {
 
 
 function deviceDetail(id) {
+    bttnPags.disabled = false;
     // Div para conter os botoes do buzzer e de opções
     addInputdiv.innerHTML = "";
     const divButtonsTop = document.createElement("div");
@@ -140,6 +184,7 @@ function deviceDetail(id) {
                 const lastLoc = `${element.locAnterior}`;
                 var idDevicess = `${element._id}`;
                 if (idDevicess == id) {
+                    idperimeter = id;
                     register.appendChild(tittleView);
                     $("#currentLocDev").append(currentLoc);
                     $("#lastLocDev").append(lastLoc);
@@ -266,4 +311,52 @@ function removeDevice(id){
     $.ajax(deleteDev);
     cleanInfos();
     getDevices();
+}
+
+function pagInfo(){
+    tittlePag.innerHTML = "";
+    tittlePag.innerHTML = "Informações Gerais";
+    elementPag1.style.setProperty('color', '#0370AB');
+    elementPag1.style.setProperty('border', '1px solid #0370AB');
+    elementPag2.style.setProperty('color', 'initial');
+    elementPag2.style.setProperty('border', 'initial');
+    elementPag3.style.setProperty('color', 'initial');
+    elementPag3.style.setProperty('border', 'initial');
+    eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside title title title""sidebar aside info info info""sidebar aside info info info"');
+
+    tittleee.innerHTML = "";
+    tittleee.innerHTML = elementStatus;
+    infoo.innerHTML = "";
+}
+
+function pagHist(){
+    tittlePag.innerHTML = "";
+    tittlePag.innerHTML = "Histórico";
+    elementPag1.style.setProperty('color', 'initial');
+    elementPag1.style.setProperty('border', 'initial');
+    elementPag2.style.setProperty('color', '#0370AB');
+    elementPag2.style.setProperty('border', '1px solid #0370AB');
+    elementPag3.style.setProperty('color', 'initial');
+    elementPag3.style.setProperty('border', 'initial');
+
+    eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside info info info""sidebar aside info info info""sidebar aside info info info"');
+    tittleee.innerHTML = "";
+    infoo.innerHTML = "";
+}
+
+function pagAlert(){
+    tittlePag.innerHTML = "";
+    tittlePag.innerHTML = "Alertas do perímetro";
+    elementPag1.style.setProperty('color', 'initial');
+    elementPag1.style.setProperty('border', 'initial');
+    elementPag2.style.setProperty('color', 'initial');
+    elementPag2.style.setProperty('border', 'initial');
+    elementPag3.style.setProperty('color', '#0370AB');
+    elementPag3.style.setProperty('border', '1px solid #0370AB');
+    
+    eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside info info info""sidebar aside info info info""sidebar aside info info info"');
+
+    tittleee.innerHTML = "";
+    infoo.innerHTML = perimeterr;
+    console.log(idperimeter);
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devices</title>
-    <link rel="stylesheet" href="../css/stylepags.css">
+    <link rel="stylesheet" href="../css/eletronicDevices.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-    <div class="containerr">
+    <div class="containerr" id="allcontainer">
         <nav class="nav sidebar">
             <div id="divLogo">
                 <img id="logo" src="../imagens/logo.png">
@@ -39,7 +39,6 @@
                 </a>
             </div>
         </nav>
-        <!-- <aside id="sideBar">Side Bar</aside> -->
         <section class="deviceStatus" id="titleDevices">
             <div class="cardStatusDevice">
                 <div id="lastLocation" class="imgInfo">
@@ -70,12 +69,16 @@
             <svg id="iconeSeta" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" /></svg>
         </nav>
         <main class="navPag" id="navpag">
-            <p id="pageOne">INFORMAÇÕES GERAIS</p><br><p id="pageTwo">HISTÓRICO</p><br><p id="pageThree">ALERTAS</p>
+            <button class="bttnPagNav" onclick="pagInfo()" ><p id="pageOne">INFORMAÇÕES GERAIS</p></button>
+            <br>
+            <button class="bttnPagNav" onclick="pagHist()" ><p id="pageTwo">HISTÓRICO</p></button>
+            <br>
+            <button class="bttnPagNav" onclick="pagAlert()" ><p id="pageThree">ALERTAS</p></button>
         </main>
         <section id="statusContent">
             <div class="tittleDevices">
                 <div class="tittlePag">
-                    <h5>Informações Gerais</h5>
+                    <h5 id="tittleNavPag"></h5>
                     <svg class="mapPinDeviceInfo" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <rect width="31" height="31" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_358_4105" transform="scale(0.0133333)"/></pattern><image id="image0_358_4105" width="75" height="75" xlink:href="data:image/png;base64,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"/></defs></svg>      
                 </div>
                 <div id="registerData" class="register">
