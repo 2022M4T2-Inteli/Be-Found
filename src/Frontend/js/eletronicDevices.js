@@ -315,7 +315,6 @@ function pagInfo(){
     elementPag3.style.setProperty('color', 'initial');
     elementPag3.style.setProperty('border', 'initial');
     eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside title title title""sidebar aside info info info""sidebar aside info info info"');
-
     tittleee.innerHTML = "";
     tittleee.innerHTML = elementStatus;
     infoo.innerHTML = "";
@@ -334,6 +333,32 @@ function pagHist(){
     eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside info info info""sidebar aside info info info""sidebar aside info info info"');
     tittleee.innerHTML = "";
     infoo.innerHTML = "";
+    $.ajax({
+        url: "/wifi/",
+        type: 'GET',
+        success: data => {
+            data.forEach(element => {
+                const historico = `
+                <div class="perimeterDiv">
+                <div class="histAtt">
+                    <h5>Localização Atual:</h5>
+                    <h6>${element.loc}</h6>
+                    <h6>${element.timestamp}</h6>
+                </div>
+                <div class="histAnt">
+                    <h5>Localização Anterior:</h5>
+                    <h6>${element.locAnterior}</h6>
+                    <h6>${element.timeLocAnte}</h6>
+                </div>
+                </div>
+                `;
+                var idTestt = `${element._id}`;
+                if (idTestt == idperimeter) {
+                    infoo.innerHTML = historico;
+                }
+            });
+        }
+    });
 }
 
 function pagAlert(){
@@ -346,14 +371,8 @@ function pagAlert(){
     elementPag2.style.setProperty('border', 'initial');
     elementPag3.style.setProperty('color', '#0370AB');
     elementPag3.style.setProperty('border', '1px solid #0370AB');
-    
     eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside info info info""sidebar aside info info info""sidebar aside info info info"');
-
     tittleee.innerHTML = "";
-    
-    console.log(idperimeter);
-
-
     $.ajax({
         url: "/wifi/",
         type: 'GET',

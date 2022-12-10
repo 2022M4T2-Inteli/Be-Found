@@ -654,3 +654,13 @@ input[type=text]::placeholder{
     border: none;
     background-color: #F6F7FA;
 }
+
+.histAtt{
+    width: 50%;
+    border-right: 1px solid black;
+}
+
+.histAnt{
+    width: 50%;
+    border-left: 1px solid black;
+}

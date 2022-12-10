@@ -15,6 +15,9 @@ const locationWifi = mongoose.model('locationWifi', {
         type: String,
         default: "Indefinido",
     },
+    timeLocAnte:{type: String,
+        default: () => moment().format('L')
+    },
     rec:{
         type: String,
         default: "Indefinido",
