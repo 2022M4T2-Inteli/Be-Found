@@ -17,14 +17,6 @@ function cleanInfos(){
     geralDevices.innerHTML = "";
 }
 
-const perimeterr = `
-<div class="perimeterDiv">
-    <div class="contentPerimeter">
-        <img src="../imagens/safePerimeter.png" width="80px" alt="">
-        <h5>Esse dispositivo não tem histórico de saídas</h5>
-    </div>
-</div>
-`;
 const elementStatus = `
 <div class="cardStatusDevice">
     <div id="lastLocation" class="imgInfo">
@@ -345,6 +337,7 @@ function pagHist(){
 }
 
 function pagAlert(){
+    var portaria= 'Portaria';
     tittlePag.innerHTML = "";
     tittlePag.innerHTML = "Alertas do perímetro";
     elementPag1.style.setProperty('color', 'initial');
@@ -357,6 +350,42 @@ function pagAlert(){
     eletronicDev.style.setProperty('grid-template-areas', '"sidebar navbar navbar navbar navbar""sidebar aside navpag navpag navpag""sidebar aside status status status""sidebar aside info info info""sidebar aside info info info""sidebar aside info info info"');
 
     tittleee.innerHTML = "";
-    infoo.innerHTML = perimeterr;
+    
     console.log(idperimeter);
+
+
+    $.ajax({
+        url: "/wifi/",
+        type: 'GET',
+        success: data => {
+            data.forEach(element => {
+                const perimeterr = `
+                <div class="perimeterDiv">
+                    <div class="contentPerimeter">
+                        <img src="../imagens/safePerimeter.png" width="80px" alt="">
+                        <h5>Esse dispositivo não tem histórico de saídas</h5>
+                    </div>
+                </div>
+                `;
+                const perimeterAway = `
+                <div class="perimeterDiv">
+                <div class="contentPerimeter">
+                    <img src="../imagens/perimeterAway.png" width="80px" alt="">
+                    <h5>Dispositivo proximo demais do limite do perimetro escolar</h5>
+                    <h6>Proximidade registrada em ${element.timeAlert}</h6>
+                </div>
+                </div>
+                `;
+                var idTest = `${element._id}`;
+                var loca = `${element.loc}`;
+                if (idTest == idperimeter) {
+                    if(loca == portaria){
+                        infoo.innerHTML = perimeterAway;
+                    } else{
+                        infoo.innerHTML = perimeterr;
+                    }
+                }
+            });
+        }
+    });
 }

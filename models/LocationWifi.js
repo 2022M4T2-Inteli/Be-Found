@@ -22,6 +22,9 @@ const locationWifi = mongoose.model('locationWifi', {
     timestamp:{type: String,
         default: () => moment().format('L')
     },
+    timeAlert:{type: String,
+        default: () => moment().format('L')
+    },
     buzer:{
         type: Number,
         default: 0,
