@@ -30,7 +30,7 @@ const getDevices = () => {
     var ndev = 0;
     $.ajax({
         async: true,
-        url: "http://127.0.0.1:5500/wifi/",
+        url: "/wifi/",
         type: 'GET',
         success: data => {
             data.forEach(element => {
@@ -78,7 +78,7 @@ function deviceDetail(id) {
     register.innerHTML = "";
 
     $.ajax({
-        url: "http://127.0.0.1:5500/wifi/",
+        url: "/wifi/",
         type: 'GET',
         success: data => {
             data.forEach(element => {
@@ -222,7 +222,7 @@ function editInfos(id) {
 function disableField(n, id) {
     var inputs = document.getElementsByName(id);
     const editInput = {
-        "url": `http://127.0.0.1:5500/wifi/${id}`,
+        "url": `/wifi/${id}`,
         "method": "PATCH",
         "timeout": 0,
         "data": {
@@ -245,7 +245,7 @@ function disableField(n, id) {
 
 function buttonBuzzer(id) {
     var buzzer = {
-        "url": `http://127.0.0.1:5500/wifi/buzer/${id}`,
+        "url": `/wifi/buzer/${id}`,
         "method": "PATCH",
         "timeout": 0,
         "data": {
@@ -258,7 +258,7 @@ function buttonBuzzer(id) {
 
 function removeDevice(id){
     var deleteDev = {
-        "url": `http://127.0.0.1:5500/wifi/del/${id}`,
+        "url": `/wifi/del/${id}`,
         "method": "DELETE",
         "timeout": 0,
     };

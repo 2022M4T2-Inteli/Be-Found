@@ -15,7 +15,7 @@ function bttnCard(id){
   var arrAtv = ["Cadeiras", "Cadeiras com rodas", "Quadro branco", "Violão", "Violino", "Flauta"];
   $.ajax({
     async: true,
-    url: "http://127.0.0.1:5500/room/find",
+    url: "/room/find",
     type: 'GET',
     success: data => {
         data.forEach(element => {
@@ -68,7 +68,7 @@ function detailRoom(nameRoom, model){
   divv.innerHTML = "";
   $.ajax({
     async: true,
-    url: `http://127.0.0.1:5500/room/${id}`,
+    url: `/room/${id}`,
     type: 'GET',
     success: data => {
         data.forEach(element => {
