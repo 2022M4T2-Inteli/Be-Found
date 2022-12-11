@@ -11,6 +11,10 @@ const locationRf = mongoose.model('locationRf',{
         type: String,
         default: "Indefinido",
     },
+    salaatt:{
+        type: String,
+        default: "Indefinido",
+    },
 })
 
 module.exports = locationRf;

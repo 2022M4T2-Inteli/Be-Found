@@ -75,53 +75,14 @@
                     </button>
                     <ul class="dropdown-menu">
                       <h5>Filtrar por:</h5>
-                      <li><button class="dropdown-item" type="button">Tipos</button></li>
-                      <li><button class="dropdown-item" type="button">Salas</button></li>
+                      <li><button onclick="filterFurnit()" class="dropdown-item" type="button">Tipos</button></li>
+                      <li><button onclick="filterRoom()" class="dropdown-item" type="button">Salas</button></li>
                     </ul>
                 </div>
             </div>
         </section>
         <section id="list">
-            <div class="rowFurniture">
-                <button onclick="bttnCard(0)" class="buttonCard">
-                    <div class="cardDevicess">
-                        <div class="cardImage"><img src="../imagens/Chair.png" alt=""></div>
-                        <div class="cardText"><h4>Cadeiras</h4></div>
-                    </div>
-                </button>
-                <button onclick="bttnCard(1)" class="buttonCard">
-                    <div class="cardDevicess">
-                        <div class="cardImage"><img src="../imagens/wheelChair.png" alt=""></div>
-                        <div class="cardText"><h4>Cadeiras com rodas</h4></div>
-                    </div>
-                </button>
-                <button onclick="bttnCard(2)" class="buttonCard">
-                    <div class="cardDevicess">
-                        <div class="cardImage"><img src="../imagens/whiteBoard.png" alt=""></div>
-                        <div class="cardText"><h4>Quadro branco</h4></div>
-                    </div>
-                </button>
-            </div>
-            <div class="rowFurnitureDown">
-                <button onclick="bttnCard(3)" class="buttonCard">
-                    <div class="cardDevicess">
-                        <div class="cardImage"><img src="../imagens/guitar.png" alt=""></div>
-                        <div class="cardText"><h4>Violão</h4></div>
-                    </div>
-                </button>
-                <button onclick="bttnCard(4)" class="buttonCard">
-                    <div class="cardDevicess">
-                        <div class="cardImage"><img src="../imagens/violin.png" alt=""></div>
-                        <div class="cardText"><h4>Violino</h4></div>
-                    </div>
-                </button>
-                <button onclick="bttnCard(5)" class="buttonCard">
-                    <div class="cardDevicess">
-                        <div class="cardImage"><img src="../imagens/flute.png" alt=""></div>
-                        <div class="cardText"><h4>Flauta</h4></div>
-                    </div>
-                </button>
-            </div>
+            
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
