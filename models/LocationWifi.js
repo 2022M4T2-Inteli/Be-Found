@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 var moment = require('moment');
 moment.locale("pt-br");
+var x = () => moment().format('L')
 
 const locationWifi = mongoose.model('locationWifi', {
     modelo:{
@@ -16,17 +17,17 @@ const locationWifi = mongoose.model('locationWifi', {
         default: "Indefinido",
     },
     timeLocAnte:{type: String,
-        default: () => moment().format('L')
+        default: () => moment().startOf('hour').fromNow();
     },
     rec:{
         type: String,
         default: "Indefinido",
     },
     timestamp:{type: String,
-        default: () => moment().format('L')
+        value: () => moment().startOf('hour').fromNow();
     },
     timeAlert:{type: String,
-        default: () => moment().format('L')
+        default: () => moment().startOf('hour').fromNow();
     },
     buzer:{
         type: Number,

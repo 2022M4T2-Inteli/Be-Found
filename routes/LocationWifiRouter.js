@@ -1,4 +1,5 @@
 const router = require('express').Router();
+var moment = require('moment');
 
 const mongoose = require('mongoose');
 const locationWifi = require('../models/LocationWifi.js')
@@ -161,10 +162,10 @@ router.patch('/:id', async (req, res) => {
         loc, 
         locAnteiror, 
         rec, 
-        timestamp, 
         buzer, 
         version, 
         beaconP, 
+        timestamp,
         status, 
         custody, 
         register
@@ -175,7 +176,7 @@ router.patch('/:id', async (req, res) => {
         loc, 
         locAnteiror, 
         rec, 
-        timestamp, 
+        timestamp:() => moment().format('L'), 
         buzer, 
         version, 
         beaconP, 
