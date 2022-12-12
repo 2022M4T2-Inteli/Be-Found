@@ -22,24 +22,26 @@
         </div>
         <div class="logincenter">
             <h1>Login</h1>
-                <div class="txt_field d-flex justify-content-center" >
-                    <input class="txt" type="text" placeholder="Email" id="email" required>
-                    <label>Email</label>
-                </div>
+            <div class="txt_field d-flex justify-content-center" >
+                <input class="txt" type="text" placeholder="Email" id="email" required minlength ="1">
+                <label>Email</label>
+            </div>
+            <div class="txt_field d-flex justify-content-center conjpass">
+                <input type="password" placeholder="Password" id="senha" required minlength ="1">
+                <label>Password</label>
+            </div>
 
-                <div class="txt_field d-flex justify-content-center">
-                    <input type="password" placeholder="Password" id="senha" required>
-                    <label>Password</label>
-                </div>
+            <div class="pass">Forgot Password?</div>
+            <div>
+            <input type="submit" value="Login" class="loginbutton" onclick="login()">
+            </div>
 
-                <div class="pass">Forgot Password?</div>
-                <input type="submit" value="Login" class="loginbutton" onclick="login()">
             <br>
             <div id="h7dont">
                 <h7>Don't have an account yet?</h7>
             </div>
             <div class="d-flex justify-content-center">
-                <a href='/requestlogin'><button id="requestacess">Request acess</button></a>
+                <a href='requestlogin.html'><button id="requestacess">Request acess</button></a>
             </div>
         </div>
         <!-- ONDAS -->

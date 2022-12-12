@@ -55,13 +55,13 @@ html, body{
 
 }
 
-.logincenter form{
+.logincenter{
     padding: 0 75px;
     box-sizing: border-box;
 
 }
 
-form .txt_field{
+.txt_field{
   position: relative;
   margin: 30px 0;
   width: 100%;
@@ -82,9 +82,12 @@ form .txt_field{
   /* margin: 0px 20px 20px 0px; */
 }
 
-form .txt_field:hover{
+.txt_field:hover{
   background: #a6a6a61f;
 }
+/* .txt_field:not(placeholder-shown){
+  background: #a6a6a61f;
+} */
 
 .txt_field label{
   position: absolute;
@@ -113,12 +116,16 @@ form .txt_field:hover{
   margin: -25px 0px 35px 5px;
   color: #a6a6a6;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
   width:fit-content;
 }
 
 .pass:hover{
   text-decoration: underline;
+}
+
+.conjpass{
+  margin-top: 15%;
 }
 
 .loginbutton{
