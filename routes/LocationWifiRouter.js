@@ -1,6 +1,7 @@
 const router = require('express').Router();
 var moment = require('moment');
-moment.locale("pt-br");
+moment.locale('pt-br');
+var localLocale = moment();
 
 const mongoose = require('mongoose');
 const locationWifi = require('../models/LocationWifi.js')
@@ -217,7 +218,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().calendar();;
+    const timestamp = localLocale.calendar();
     
     const buz = { 
         timestamp:timestamp, 
