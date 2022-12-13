@@ -177,7 +177,7 @@ router.patch('/:id', async (req, res) => {
         loc, 
         locAnteiror, 
         rec, 
-        timestamp:() => moment().format('L'), 
+        timestamp, 
         buzer, 
         version, 
         beaconP, 
@@ -217,7 +217,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().format('lll');
+    const timestamp = moment().format('lll').subtract(3, 'hours');;
     
     const buz = { 
         timestamp:timestamp, 
