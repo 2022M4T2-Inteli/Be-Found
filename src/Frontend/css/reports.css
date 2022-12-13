@@ -1,50 +1,25 @@
-* {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: 'Poppins';
-}
 
-.vert-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: max-content;
-    height: 100vh;
-    padding: 20px;
-    padding-top: 0;
-    background-color: #f5f5f5;
-}
+/* -------------------codigo michel---------------------- */
 
-.img {
-    max-height: 30px;
-}
 
-.horiz-bar {
-    position: fixed;
-    top: 0;
-    left: 70px;
-    right: 0;
-    height: max-content;
-}
 
-.top-container {
+/* .top-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-}
+} */
 
-.center {
+/* .center {
     background-color: #d3d3d3;
     position: fixed;
     top: 70px;
     left: 70px;
     right: 0;
     bottom: 0;
-}
+} */
 
-.center-container {
+/* .center-container {
     background-color: #fff;
     width: 70%;
     height: 80%;
@@ -55,23 +30,18 @@
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-}
+} */
 
-.p {
-    position: fixed;
-    top: 150px;
-    
-}
 
-.inp {
+/* .inp {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     font-size: medium;
     margin-bottom: 10px;
-}
+} */
 
-.btn {
+/* .btn {
     position: fixed;
     bottom: 90px;
     padding: 15px;
@@ -84,23 +54,23 @@
     font-size: 14px;
     font-weight: 600;
     margin-top: -90px;
-}
+} */
 
-.label {
+/* .label {
     width: 250px;
     display: flex;
     flex-direction: column;
-}
+} */
 
-input,
+/* input,
 select {
     border: 1px solid;
     border-radius: 5px;
     padding: 10px;
     color: rgb(185, 185, 185);
-}
+} */
 
-.popup {
+/* .popup {
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     top: 0;
@@ -131,8 +101,51 @@ select {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+} */
+
+/* .img-popup {
+    max-height: 50px;
+} */
+
+
+/* -------------------fim codigo michel---------------------- */
+/* GRID */
+html, body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.img-popup {
-    max-height: 50px;
+.containerr{
+    /* background-color: red; */
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+                        "reuso reuso reuso reuso reuso reuso reuso reuso reuso reuso reuso reuso"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont"
+                        "reuso cont cont cont cont cont cont cont cont cont cont cont";
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
+
+#reusobar {
+    grid-area: reuso;
+    background-color: rgb(47, 0, 255);
+    position: relative;
+}
+#conteudo{
+    grid-area: cont;
+    position: relative;
+}
+
