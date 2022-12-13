@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 var moment = require('moment');
 moment.locale("pt-br");
-var x = () => moment().format('L')
+
 
 const locationWifi = mongoose.model('locationWifi', {
     modelo:{
