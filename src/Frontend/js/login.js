@@ -20,4 +20,3 @@ function login(){
        } 
     });
 }
-export default e_mail;
