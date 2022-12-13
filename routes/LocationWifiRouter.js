@@ -201,14 +201,13 @@ router.patch('/:id', async (req, res) => {
     }
 })
 
-router.patch('/rec/:rec', async (req, res) => {
-    const id = req.params.rec;
+router.patch('/:rec', async (req, res) => {
+    const rec = req.params.rec;
     
     const { 
         modelo,
         loc, 
         locAnterior, 
-        rec, 
         buzer, 
         version, 
         beaconP, 
@@ -221,8 +220,7 @@ router.patch('/rec/:rec', async (req, res) => {
     const all = { 
         modelo, 
         loc, 
-        locAnterior, 
-        rec, 
+        locAnterior,
         timestamp, 
         buzer, 
         version, 
@@ -233,7 +231,7 @@ router.patch('/rec/:rec', async (req, res) => {
     };
     // const buz = buzer;
     try {
-        const updateLoc = await locationWifi.updateOne({ rec: id }, all);
+        const updateLoc = await locationWifi.updateOne({ rec: rec }, all);
         if (updateLoc.matchedCount === 0) {
             res.status(424).json({ msg: "Não encontrado" });
             return
