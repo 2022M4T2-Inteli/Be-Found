@@ -216,7 +216,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().startOf('hour').fromNow();
+    const timestamp = moment().calendar();;
     
     const buz = { 
         timestamp:timestamp, 
