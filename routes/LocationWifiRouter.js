@@ -217,7 +217,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().format('lll').duration(3, 'h');;
+    const timestamp = moment().format('lll').subtract(3, 'h');;
     
     const buz = { 
         timestamp:timestamp, 
