@@ -3,15 +3,6 @@ var moment = require('moment');
 moment.locale('pt-br');
 
 
-function datee(){
-    var date = moment().calendar();
-    var hourDelta = 03
-
-    date.subtract(hourDelta, 'hours');
-    var teste = date.toString()
-    return teste
-}
-
 const mongoose = require('mongoose');
 const locationWifi = require('../models/LocationWifi.js')
 
@@ -227,7 +218,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = datee();
+    const timestamp = moment().calendar();
     
     const buz = { 
         timestamp:timestamp, 
