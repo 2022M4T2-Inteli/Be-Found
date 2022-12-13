@@ -162,7 +162,7 @@ router.patch('/:id', async (req, res) => {
     const { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         buzer, 
         version, 
@@ -176,7 +176,7 @@ router.patch('/:id', async (req, res) => {
     const all = { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         timestamp, 
         buzer, 
