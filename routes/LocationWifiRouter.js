@@ -160,7 +160,7 @@ router.patch('/:id', async (req, res) => {
     const id = req.params.id;
     
     const { 
-        modelo, 
+        modelo,
         loc, 
         locAnterior, 
         rec, 
@@ -189,6 +189,51 @@ router.patch('/:id', async (req, res) => {
     // const buz = buzer;
     try {
         const updateLoc = await locationWifi.updateOne({ _id: id }, all);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(all);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
+router.patch('/:rec', async (req, res) => {
+    const id = req.params.rec;
+    
+    const { 
+        modelo,
+        loc, 
+        locAnterior, 
+        rec, 
+        buzer, 
+        version, 
+        beaconP, 
+        timestamp,
+        status,
+        custody, 
+        register
+    } = req.body;
+    
+    const all = { 
+        modelo, 
+        loc, 
+        locAnterior, 
+        rec, 
+        timestamp, 
+        buzer, 
+        version, 
+        beaconP, 
+        status, 
+        custody, 
+        register
+    };
+    // const buz = buzer;
+    try {
+        const updateLoc = await locationWifi.updateOne({ rec: id }, all);
         if (updateLoc.matchedCount === 0) {
             res.status(424).json({ msg: "Não encontrado" });
             return
