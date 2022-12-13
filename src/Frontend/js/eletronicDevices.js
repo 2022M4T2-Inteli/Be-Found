@@ -1,3 +1,5 @@
+import e_mail from "./login";
+
 $(document).ready(() => {
     getDevices();
     elementPag2.style.setProperty('color', 'initial');
@@ -5,6 +7,7 @@ $(document).ready(() => {
     elementPag3.style.setProperty('color', 'initial');
     elementPag3.style.setProperty('border', 'initial');
     tittlePag.innerHTML = "Informações Gerais";
+    document.getElementById('nomePerfil').innerHTML = e_mail;
 });
 
 function cleanInfos(){

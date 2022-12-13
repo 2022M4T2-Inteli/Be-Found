@@ -11,8 +11,8 @@ function login(){
         data: {
             username: e_mail, password: password
         },
-       success: (d) =>{
-         if (d.message == "Login successful!") {
+       success: (response) =>{
+         if (response.message == "Login successful!") {
             setTimeout(()=>{
                 window.location = "/eletronicDevices"
              },1500)
@@ -20,3 +20,4 @@ function login(){
        } 
     });
 }
+export default e_mail;
