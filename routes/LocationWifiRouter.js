@@ -7,7 +7,7 @@ function datee(){
     var date = moment().calendar();
     var hourDelta = 03
 
-    date.subtract({hours: hourDelta});
+    date.subtract(hourDelta, 'hours');
     var teste = date.toString()
     return teste
 }
