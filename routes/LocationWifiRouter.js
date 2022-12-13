@@ -1,7 +1,6 @@
 const router = require('express').Router();
 var moment = require('moment');
 moment.locale('pt-br');
-var hourDelta = 03;
 
 const mongoose = require('mongoose');
 const locationWifi = require('../models/LocationWifi.js')
@@ -218,7 +217,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().format('lll').subtract({ hours: hourDelta});
+    const timestamp = moment().format('lll').duration(3, 'h');;
     
     const buz = { 
         timestamp:timestamp, 
