@@ -2,6 +2,7 @@ const router = require('express').Router();
 var moment = require('moment');
 moment.locale('pt-br');
 
+
 const mongoose = require('mongoose');
 const locationWifi = require('../models/LocationWifi.js')
 
