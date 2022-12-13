@@ -37,8 +37,8 @@ router.get('/:nameRoom', async (req, res) => {
 //Post new room esp
 router.post('/', async (req, res) => {
 
-    const { infoCard, attLocRf, nameRoom} = req.body;
-    const location = { infoCard, attLocRf, nameRoom};
+    const {nameRoom,qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
+    const location = { nameRoom,qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
 
     try {
         // if(!modelo){
@@ -56,8 +56,8 @@ router.post('/', async (req, res) => {
 //Patch by id
 router.patch('/:id', async (req, res) => {
     const id = req.params.id;
-    const {infoCard, attLocRf, nameRoom} = req.body;
-    const location = { infoCard, attLocRf, nameRoom};
+    const {nameRoom,qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
+    const location = { nameRoom,qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
     try {
         const updateLoc = await roomRf.updateOne({ _id: id }, location);
         if (updateLoc.matchedCount === 0) {

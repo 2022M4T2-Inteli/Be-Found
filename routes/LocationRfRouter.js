@@ -21,30 +21,12 @@ router.get('/find', async (req, res) => {
     }
 })
 
-//Get all from location
-router.get('/:location', async (req, res) => {
-    const { location } = req.params;
-
-    try {
-        const room = await locationRf.find({ localizacao: location });
-        if (!room) {
-            res.status(424).json({ msg: "Não encontrado" });
-            return
-
-        }
-        res.status(200).json(room);
-
-    }
-    catch (error) {
-        res.status(500).json({ error: error });
-    }
-})
 
 //Post new rfid tag
 router.post('/', async (req, res) => {
 
-    const { modelo, localizacao, rec} = req.body;
-    const location = { modelo, localizacao, rec};
+    const { modelo, beaconP, salaatt} = req.body;
+    const location = { modelo, beaconP, salaatt};
     console.log(req.body);
 
     try {
@@ -63,8 +45,8 @@ router.post('/', async (req, res) => {
 //Patch by id
 router.patch('/:id', async (req, res) => {
     const id = req.params.id;
-    const {modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp } = req.body;
-    const location = { modelo, localizacao, rec, timestamp, buzer, version, beaconP, idd, idp };
+    const {modelo, beaconP, salaatt} = req.body;
+    const location = { modelo, beaconP, salaatt };
     try {
         const updateLoc = await locationRf.updateOne({ _id: id }, location);
         if (updateLoc.matchedCount === 0) {
