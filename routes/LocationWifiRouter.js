@@ -201,7 +201,7 @@ router.patch('/:id', async (req, res) => {
     }
 })
 
-router.patch('/:rec', async (req, res) => {
+router.patch('/rec/:rec', async (req, res) => {
     const id = req.params.rec;
     
     const { 
