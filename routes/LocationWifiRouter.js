@@ -160,14 +160,15 @@ router.patch('/:id', async (req, res) => {
     const id = req.params.id;
     
     const { 
-        modelo,
+        modelo, 
         loc, 
-        locAnterior, 
+        locAnteiror, 
         rec, 
-        buzer, 
+        timestamp, 
+        buzer,
+        perm, 
         version, 
         beaconP, 
-        timestamp,
         status, 
         custody, 
         register
@@ -176,10 +177,11 @@ router.patch('/:id', async (req, res) => {
     const all = { 
         modelo, 
         loc, 
-        locAnterior, 
+        locAnteiror, 
         rec, 
         timestamp, 
-        buzer, 
+        buzer,
+        perm, 
         version, 
         beaconP, 
         status, 
@@ -201,18 +203,19 @@ router.patch('/:id', async (req, res) => {
     }
 })
 
-router.patch('/:rec', async (req, res) => {
+router.patch('/rec/:rec', async (req, res) => {
     const rec = req.params.rec;
     
     const { 
-        modelo,
+        modelo, 
         loc, 
-        locAnterior, 
-        buzer, 
+        locAnteiror, 
+        timestamp, 
+        buzer,
+        perm, 
         version, 
         beaconP, 
-        timestamp,
-        status,
+        status, 
         custody, 
         register
     } = req.body;
@@ -220,9 +223,10 @@ router.patch('/:rec', async (req, res) => {
     const all = { 
         modelo, 
         loc, 
-        locAnterior,
+        locAnteiror, 
         timestamp, 
-        buzer, 
+        buzer,
+        perm, 
         version, 
         beaconP, 
         status, 
