@@ -16,18 +16,18 @@ const locationWifi = mongoose.model('locationWifi', {
         type: String,
         default: "Indefinido",
     },
-    timeLocAnte:{type: String,
-        default: () => moment().startOf('hour').fromNow()
+    timeLocAnte:{
+        type: String,
     },
     rec:{
         type: String,
         default: "Indefinido",
     },
-    timestamp:{type: String,
-        default: () => moment().startOf('hour').fromNow()
+    timestamp:{
+        type: String,
     },
-    timeAlert:{type: String,
-        default: () => moment().startOf('hour').fromNow()
+    timeAlert:{
+        type: String,
     },
     buzer:{
         type: Number,
@@ -55,7 +55,7 @@ const locationWifi = mongoose.model('locationWifi', {
     },
     register:{
         type:String,
-        default: "Indefinido"
+        default: () => moment().format('L')
     },
 })
 

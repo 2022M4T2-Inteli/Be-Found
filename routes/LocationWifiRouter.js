@@ -1,7 +1,6 @@
 const router = require('express').Router();
 var moment = require('moment');
 moment.locale('pt-br');
-var localLocale = moment();
 
 const mongoose = require('mongoose');
 const locationWifi = require('../models/LocationWifi.js')
@@ -218,13 +217,55 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = localLocale.calendar();
+    const timestamp = moment().format('lll');
     
     const buz = { 
         timestamp:timestamp, 
     };
+    try {
+        const updateLoc = await locationWifi.updateOne({ _id: id }, buz);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(buz);
 
-    // const buz = buzer;
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+module.exports = router;
+
+router.patch('/timeAlert/:id', async (req, res) => {
+    const id = req.params.id;
+    const timestamp = moment().format('lll');
+    
+    const buz = { 
+        timestamp:timestamp, 
+    };
+    try {
+        const updateLoc = await locationWifi.updateOne({ _id: id }, buz);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(buz);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+module.exports = router;
+
+router.patch('/timeLocAnte/:id', async (req, res) => {
+    const id = req.params.id;
+    const timestamp = moment().format('lll');
+    
+    const buz = { 
+        timestamp:timestamp, 
+    };
     try {
         const updateLoc = await locationWifi.updateOne({ _id: id }, buz);
         if (updateLoc.matchedCount === 0) {
