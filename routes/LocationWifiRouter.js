@@ -217,7 +217,7 @@ router.delete('/del/:id', async (req, res) => {
 
 router.patch('/timestamp/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().format('lll').subtract(3, 'h');;
+    const timestamp = moment().calendar();
     
     const buz = { 
         timestamp:timestamp, 
@@ -239,7 +239,7 @@ module.exports = router;
 
 router.patch('/timeAlert/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().format('lll');
+    const timestamp = moment().calendar();
     
     const buz = { 
         timestamp:timestamp, 
@@ -261,7 +261,7 @@ module.exports = router;
 
 router.patch('/timeLocAnte/:id', async (req, res) => {
     const id = req.params.id;
-    const timestamp = moment().format('lll');
+    const timestamp = moment().calendar();
     
     const buz = { 
         timestamp:timestamp, 
