@@ -71,23 +71,21 @@ html, body{
   border-radius: 4px;
 }
 
+
 .txt_field input{
+  border-radius: 4px;
   width: 100%;
   padding: 0 5px;
-  height: 40px;
+  height: 30px;
   font-size: 12px;
   border: none;
   background: none;
   outline: none;
-  /* margin: 0px 20px 20px 0px; */
 }
 
-.txt_field:hover{
-  background: #a6a6a61f;
+input:focus{
+  background: #a6a6a648;
 }
-/* .txt_field:not(placeholder-shown){
-  background: #a6a6a61f;
-} */
 
 .txt_field label{
   position: absolute;
