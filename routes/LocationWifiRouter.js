@@ -277,7 +277,7 @@ router.patch('/rec/:rec', async (req, res) => {
     const { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         timestamp, 
         buzer,
         perm, 
@@ -291,7 +291,7 @@ router.patch('/rec/:rec', async (req, res) => {
     const all = { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         timestamp, 
         buzer,
         perm, 
