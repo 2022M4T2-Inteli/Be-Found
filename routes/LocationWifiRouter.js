@@ -65,6 +65,27 @@ router.get('/buzer/:id', async (req, res) => {
     }
 })
 
+router.get('/buzer/rec/:rec', async (req, res) => {
+    const rec = req.params.rec;
+    //const buz = req.body.buzer
+
+    try {
+        const checkBuz = await locationWifi.findOne({ rec: rec });
+        if (!checkBuz) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+
+        }
+        res.status(200).json({
+            buzer: checkBuz.buzer
+        });
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
 //Post new device
 router.post('/', async (req, res) => {
 
@@ -156,6 +177,54 @@ router.patch('/buzer/:id', async (req, res) => {
     }
 })
 
+router.patch('/buzer/pat/:recc', async (req, res) => {
+    const recc = req.params.recc;
+    
+    const { 
+        modelo, 
+        loc, 
+        locAnteiror, 
+        rec, 
+        timestamp, 
+        buzer,
+        perm, 
+        version, 
+        beaconP, 
+        status, 
+        custody, 
+        register
+    } = req.body;
+    
+    const buz = { 
+        modelo:modelo, 
+        loc:loc,
+        locAnteiror:locAnteiror, 
+        rec:rec, 
+        timestamp:timestamp, 
+        buzer,
+        perm:perm,
+        version:version, 
+        beaconP:beaconP, 
+        status:status, 
+        custody:custody,
+        register:register,
+    };
+
+    // const buz = buzer;
+    try {
+        const updateLoc = await locationWifi.updateOne({ rec: recc }, buz);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(buz);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
 router.patch('/:id', async (req, res) => {
     const id = req.params.id;
     
@@ -196,7 +265,6 @@ router.patch('/:id', async (req, res) => {
             return
         }
         res.status(200).json(all);
-
     }
     catch (error) {
         res.status(500).json({ error: error });
