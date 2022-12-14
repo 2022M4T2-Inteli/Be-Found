@@ -135,7 +135,7 @@ router.patch('/buzer/:id', async (req, res) => {
     const { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         timestamp, 
         buzer,
@@ -150,7 +150,7 @@ router.patch('/buzer/:id', async (req, res) => {
     const buz = { 
         modelo:modelo, 
         loc:loc,
-        locAnteiror:locAnteiror, 
+        locAnterior:locAnterior, 
         rec:rec, 
         timestamp:timestamp, 
         buzer,
@@ -183,7 +183,7 @@ router.patch('/buzer/pat/:recc', async (req, res) => {
     const { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         timestamp, 
         buzer,
@@ -198,7 +198,7 @@ router.patch('/buzer/pat/:recc', async (req, res) => {
     const buz = { 
         modelo:modelo, 
         loc:loc,
-        locAnteiror:locAnteiror, 
+        locAnterior:locAnterior, 
         rec:rec, 
         timestamp:timestamp, 
         buzer,
@@ -231,7 +231,7 @@ router.patch('/:id', async (req, res) => {
     const { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         timestamp, 
         buzer,
@@ -246,7 +246,7 @@ router.patch('/:id', async (req, res) => {
     const all = { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         timestamp, 
         buzer,
@@ -402,7 +402,7 @@ router.patch('/perm/pat/:perim', async (req, res) => {
     const { 
         modelo, 
         loc, 
-        locAnteiror, 
+        locAnterior, 
         rec, 
         timestamp, 
         buzer,
@@ -417,7 +417,7 @@ router.patch('/perm/pat/:perim', async (req, res) => {
     const buz = { 
         modelo:modelo, 
         loc:loc,
-        locAnteiror:locAnteiror, 
+        locAnterior:locAnterior, 
         rec:rec, 
         timestamp:timestamp, 
         buzer:buzer,
