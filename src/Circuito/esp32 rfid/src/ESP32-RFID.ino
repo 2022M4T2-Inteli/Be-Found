@@ -6,7 +6,7 @@
 // #include <Arduino_JSON.h>
 #include <ArduinoJson.h>
 #include <cstring>
-
+#include <string>
 
 // Change the SSID and PASSWORD here if needed
 const char * WIFI_FTM_SSID = "Inteli-COLLEGE"; // SSID of AP that has FTM Enabled
@@ -32,17 +32,70 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 
 
-int postRequest(){
+
+String trans(unsigned char *p)
+{
+    //byte to string
+    String s(reinterpret_cast<const char *>(p), 16);
+    Serial.print(s);  
+    return s;
+}
+
+String modelo(String txt){
+  int temp = 0;
+  for(int i = 0; i < txt.length()-1; i++){
+    if(txt[i] == '/'){
+      temp = 1;
+    }
+    if(temp == 1){
+      txt[i] = ' ';
+    }
+    Serial.println(txt[i]);
+  }
+  //removeSpaces(txt);
+  return txt;
+}
+
+
+String beacon(String txt){
+  int temp = 0;
+  for(int i = txt.length()-1; i <= 0; i--){
+    if(txt[i] == '/'){
+      temp = 1;
+    }
+    if(temp == 1){
+      txt[i] = ' ';
+    }
+  }
+  //removeSpaces(txt);
+  return txt;
+}
+
+// void removeSpaces(String str)
+// {
+//     // To keep track of non-space character count
+//     int count = 0;
+ 
+//     // Traverse the given string. If current character
+//     // is not space, then place it at index 'count++'
+//     for (int i = 0; str[i]; i++)
+//         if (str[i] != ' ')
+//             str[count++] = str[i]; // here count is
+//                                    // incremented
+//     str[count] = '\0';
+// }
+
+
+int postRequest(unsigned char *p){
   HTTPClient http;
-  const char* url = "http://10.128.65.224:5500/rfid";
+  const char* url = "https://ocff9f-5500.preview.csb.app/rfid";
   http.begin(url);
   http.addHeader("Content-Type", "application/json");
 
      StaticJsonDocument<200> doc;
-      doc["modelo"] = "Macbook";
-      doc["localizacao"] = "sala 12";
-      doc["rec"] = "MCBK123";
-      doc["data"] = "18/11/22";
+      doc["modelo"] = modelo(trans(p));//modelo(trans(p))
+      doc["beaconP"] = beacon(trans(p));//beacon(trans(p))
+      doc["salaatt"] = "sala joaoa";
 
       String requestBody;
       serializeJson(doc, requestBody);
@@ -119,6 +172,7 @@ void loop()
 
   //chama o menu e recupera a opção desejada
   int opcao = menu();
+  //int opcao = 0;
    // verifica se ainda está com o cartão/tag
 //  if ( ! mfrc522.PICC_IsNewCardPresent()) 
 //  {
@@ -191,9 +245,12 @@ void leituraDados()
   for (uint8_t i = 0; i < MAX_SIZE_BLOCK; i++)
   {
       Serial.write(buffer[i]);
+
   }
+
+  Serial.println(trans(buffer));
   delay(500);
-  postRequest();
+  postRequest(buffer);
   Serial.println(" ");
   delay(1000);
   reinit();
