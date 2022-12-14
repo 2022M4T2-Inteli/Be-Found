@@ -395,4 +395,53 @@ router.patch('/timeLocAnte/:id', async (req, res) => {
         res.status(500).json({ error: error });
     }
 })
+
+router.patch('/perm/pat/:perim', async (req, res) => {
+    const perim = req.params.perim;
+    
+    const { 
+        modelo, 
+        loc, 
+        locAnteiror, 
+        rec, 
+        timestamp, 
+        buzer,
+        perm, 
+        version, 
+        beaconP, 
+        status, 
+        custody, 
+        register
+    } = req.body;
+    
+    const buz = { 
+        modelo:modelo, 
+        loc:loc,
+        locAnteiror:locAnteiror, 
+        rec:rec, 
+        timestamp:timestamp, 
+        buzer:buzer,
+        perm,
+        version:version, 
+        beaconP:beaconP, 
+        status:status, 
+        custody:custody,
+        register:register,
+    };
+
+    // const buz = buzer;
+    try {
+        const updateLoc = await locationWifi.updateOne({ rec: perim }, buz);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(buz);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
 module.exports = router;
