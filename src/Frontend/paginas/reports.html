@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="../css/reports.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
     <title>Relatório</title>
+
+    <!-- reuso -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+
 </head>
 <body>
     <div class="containerr">
         <!-- <header> -->
-        <nav class="nav reusobar" id="reusobar">oiii</nav>
+        <nav id="navbar"></nav>
         <!-- </header> -->
-        <nav class=" nav conteudo" id="conteudo">
+        <main>
             <div>
                 <h1>Gerar Relatório</h1>
             </div>
@@ -26,12 +36,17 @@
                 <label class="label">Formato do Arquivo<select><option disabled selected>Selecionar</option></select></label>
             </div>
             <button class="btn"><strong>Gerar Relatório</strong></button>
-        </nav>
+        </main>
+        <aside id="sidebar"></aside>
     </div>
-    <!-- <script>
+    <script>
         $(document).ready(function () {
-          $("#reuso").load("paginas/Sidebar.html");
+          $("#sidebar").load("paginas/Sidebar.html");
         });
-      </script> -->
+
+        $(document).ready(function () {
+          $("#navbar").load("paginas/navbar.html");
+        });
+      </script>
 </body>
 </html>
