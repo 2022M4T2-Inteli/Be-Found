@@ -72,8 +72,8 @@ router.patch('/:id', async (req, res) => {
     }
 })
  
-router.patch('/name/:nameroom', async (req, res) => {
-    const { nameroom } = req.params.nameRoom;
+router.patch('/name/:nameRoom', async (req, res) => {
+    const nameroom  = req.params.nameRoom;
     const {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
     const location = {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
     try {
