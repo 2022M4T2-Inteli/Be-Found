@@ -77,7 +77,7 @@ router.patch('/:nameroom', async (req, res) => {
     const {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
     const location = {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
     try {
-        const updateLoc = await roomRf.updateOne({ nameRoom: nameroom }, location);
+        const updateLoc = await roomRf.updateOne({ nameRoom: nameRoom }, location);
         if (updateLoc.matchedCount === 0) {
             res.status(424).json({ msg: "Não encontrado" });
             return
