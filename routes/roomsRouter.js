@@ -71,9 +71,9 @@ router.patch('/:id', async (req, res) => {
         res.status(500).json({ error: error });
     }
 })
-
+ 
 router.patch('/name/:nameroom', async (req, res) => {
-    const { nameRoom } = req.params;
+    const { nameRoom } = req.params.nameroom;
     const {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
     const location = {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
     try {
