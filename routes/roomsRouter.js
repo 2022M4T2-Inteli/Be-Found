@@ -72,12 +72,12 @@ router.patch('/:id', async (req, res) => {
     }
 })
  
-router.patch('/name/:nameroom', async (req, res) => {
-    const { nameRoom } = req.params.nameroom;
+router.patch('/name/:nameRoom', async (req, res) => {
+    const { nameroom } = req.params.nameRoom;
     const {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
     const location = {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
     try {
-        const updateLoc = await roomRf.updateOne({ nameRoom: nameRoom }, location);
+        const updateLoc = await roomRf.updateOne({ nameRoom: nameroom }, location);
         if (updateLoc.matchedCount === 0) {
             res.status(424).json({ msg: "Não encontrado" });
             return
