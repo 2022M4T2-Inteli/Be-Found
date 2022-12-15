@@ -72,6 +72,24 @@ router.patch('/:id', async (req, res) => {
     }
 })
 
+router.patch('/:nameroom', async (req, res) => {
+    const { nameRoom } = req.params;
+    const {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut} = req.body;
+    const location = {qtdCad,qtdCadRod,qtdQuad,qtdviol,qtdvioli,qtdflaut};
+    try {
+        const updateLoc = await roomRf.updateOne({ nameRoom: nameroom }, location);
+        if (updateLoc.matchedCount === 0) {
+            res.status(424).json({ msg: "Não encontrado" });
+            return
+        }
+        res.status(200).json(location);
+
+    }
+    catch (error) {
+        res.status(500).json({ error: error });
+    }
+})
+
 //Delete all
 router.delete('/del-all', async (req, res) => {
     try {
