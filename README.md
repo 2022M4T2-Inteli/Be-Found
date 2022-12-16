@@ -21,7 +21,18 @@
 ## 📝 Descrição
 Os equipamentos de tecnologia da Beacon são emprestados a alunos, professores e colaboradores da escola. Existem dois tipos de empréstimos: os diários (em que o locador dispõe o ativo pelo período de um dia durante o horário escolar) e os de custódia (em que o locador dispõe o ativo por um período maior de tempo). Alguns desses usuários são descuidados com a utilização desses recursos (deixando os equipamentos em pátios, salas de aula, corredores). Isso, por sua vez, dificulta a localização (dentro e fora do perímetro escolar) e o retorno para o estoque de TI. Além disso, esse problema afeta também a equipe de gestão de patrimônio no controle de notas fiscais, fechamento do patrimônio e abate financeiro da empresa. Desse modo, está sendo desenvolvida uma solução IoT que irá conectar os equipamentos de tecnologia, buscando identificar a localização desses objetos dentro do perímetro escolar.  
 
+### Objetivo Geral
+A Beacon School tem como objetivo geral controlar seus ativos patrimoniais por meio de um sistema com base IoT e otimizar o tempo de trabalho de seus colaboradores. A localização será feita por meio de uma plataforma web e dessa forma, será possível o gerenciamento de seus equipamentos perdidos.
 
+### Objetivos Específicos 
+Dentre os objetivos específicos estão:
+- Desenvolver um painel web com mapa do Campus;
+- Indicar a localização dos ativos perdidos dentro da escola;
+- Criar um sistema RFID para a localização de equipamentos não eletrônicos;
+- Alertar quando um equipamento sair do perímetro escolar;
+- Gerar relatórios, buscando facilitar a gestão do inventário;
+- Permitir melhor controle dos ativos;
+- Visualizar os equipamentos que saírem do perímetro escolar.
 
 
 ## 📁 Estrutura de pastas
