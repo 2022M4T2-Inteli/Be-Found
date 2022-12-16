@@ -42,7 +42,6 @@ Dentre os objetivos específicos estão:
   &emsp;|--> Versões anteriores<br>
     &emsp;&emsp;|--> Apresentações<br>
     &emsp;&emsp;|--> Documentação<br>
-|--> Imagens<br>
 |--> src<br>
   &emsp;|--> Back-end<br>
   &emsp;|--> Circuito<br>
@@ -56,9 +55,9 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>Documentação</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>Versões anteriores</b> onde estão presentes as antigas versões das apresentações e do documento final.
 
-- <b>Imagens</b>: aqui estão todas as imagens relevantes e frequentemente usadas no projeto
-
 - <b>src</b>: aqui esta toda a parte de código presente no projeto
+
+- <b>Os arquivos ".gitignore", "app.js", "package-lock.json" e "package.json são referentes ao back-end do projeto, e estão na pasta raiz, visto que isso é essencial para o funcionamento do deploy na Web."</b>
 
 ## 🗃 Histórico de lançamentos
 
