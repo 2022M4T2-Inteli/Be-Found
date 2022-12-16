@@ -137,7 +137,7 @@ html, body{
 
 
 #mapCampus{
-    background-image: url(mapa.png);
+    background-image: url(../imagens/mapa.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin: 0 auto;
