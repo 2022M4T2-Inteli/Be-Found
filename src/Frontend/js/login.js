@@ -14,7 +14,7 @@ function login(){
        success: (response) =>{
          if (response.message == "Login successful!") {
             setTimeout(()=>{
-                window.location = "/eletronicDevices"
+                window.location = "/home2"
              },1500)
          }
        } 
