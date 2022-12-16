@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 html, body{
     margin-top: 0;
     margin-bottom: 0;
@@ -10,48 +11,24 @@ html, body{
     background-color: #F6F7FA;;
 }
 
-.sidebar{
-    z-index: 2;
-    width: 8.22%;
+.sidebar a svg{
+    width: 100%;
     height: 100%;
-    background-color: #ffffff;
-    box-shadow: 3px 4px 45px rgba(0, 0, 0, 0.08);
-    position: fixed;
 }
 
-.sidebar a svg{
-    margin-top: 25%;
-    width: 22px;
-    height: 22px;
+.sidebar a{
+    margin-bottom: 51%;
+    width: 55px;
+    height: 55px;
     color: #000000;
 }
 
-.sidebar a img{
-    margin-top: 25%;
-    width: 22px;
-    height: 22px;
-}
-
-.sidebar a{
-    text-align: center;
-    margin-top: 6px;
-    margin-bottom: 35px;
-    width: 55px;
-    height: 55px;
-}
-
-.sidebar a svg:hover{
-    color: #0370AB;
-    background-color: #EEFBFF;
-}
 .sidebar a:hover{
-    color: #0370AB;
-
-    background-color: #EEFBFF;
-    border-radius: 100%;
+    color: #01939F;;
 }
 
-.sidebar a{
+.sideicones:hover{
+    background-color: #01929f34;
     border-radius: 100%;
 }
 
@@ -63,56 +40,91 @@ nav div{
 }
 
 #divLogo{
-    position: static;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
     margin: 0;
     text-align: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #logo{
     width: 80px;
     height: 91px;
-    margin-left: 12px;
-}
-
-#navbar{
-    background-color: white;
-    position: fixed;
-    height: 12%;
-    width: 100%;
-    z-index: 1;
-}
-
-#nomeMapa{
-    margin-left: 11%;
+    /* margin-left: 15%; */
     text-align: center;
-    margin-top: 25px;
-    font-size: 18px;
+}
 
+#nomePagina{
+    margin-left: 2%;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Abel', sans-serif;
+    font-weight:normal;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #nomePerfil{
-    margin-left: 55%;
-    margin-top: 25px;
+    position:absolute;
+    margin-left: 85%;
     font-size: 15px;
-}
-
-#fotoPerfil{
-    border-radius: 100%;
-    height: 50px;
-    margin-top: 15px;
-    margin-right: 20px;
+    font-family: 'Abel', sans-serif;
+    font-weight:normal;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #iconeSeta{
-    margin-top: 30px;
-    margin-right: 10px;
+    /* display: flex; */
+    position: absolute;
+    border: none;
+    background:none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 92%;
+}
+
+#setinha{
+    background: #01939F;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #iconeMapa{
     margin-top: 30px;
     margin-left: 60px;
+}
+
+#ezoffice{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sidebar{
+    background-color: #ffffff;
+    grid-area: sidebar;
+    box-shadow: 3px 4px 45px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+}
+
+.navbar{
+    background-color: #ffffff;
+    grid-area: navbar;
+    position: relative;
+    z-index: 1;
+    /* text-align: center; */
+
 }
 
 /* PAGINA DISPOSITIVOS ELETRONICOS */
@@ -137,7 +149,7 @@ nav div{
 
 
 #sideBar{
-    background-color: #01939F;
+    background-color: white;
     grid-area: sidebar;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);

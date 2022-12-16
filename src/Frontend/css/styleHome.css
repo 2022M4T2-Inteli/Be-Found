@@ -8,6 +8,121 @@ html, body{
     background-color: #F6F7FA;;
 }
 
+.sidebar a svg{
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar a{
+    margin-bottom: 51%;
+    width: 55px;
+    height: 55px;
+    color: #000000;
+}
+
+.sidebar a:hover{
+    color: #01939F;;
+}
+
+.sideicones:hover{
+    background-color: #01929f34;
+    border-radius: 100%;
+}
+
+nav div{
+    position: relative;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: 5% auto auto auto;
+}
+
+#divLogo{
+    margin: 0;
+    text-align: center;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#logo{
+    width: 80px;
+    height: 91px;
+    /* margin-left: 15%; */
+    text-align: center;
+}
+
+#nomePagina{
+    margin-left: 2%;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Abel', sans-serif;
+    font-weight:normal;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#nomePerfil{
+    position:absolute;
+    margin-left: 85%;
+    font-size: 15px;
+    font-family: 'Abel', sans-serif;
+    font-weight:normal;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#iconeSeta{
+    /* display: flex; */
+    position: absolute;
+    border: none;
+    background:none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 92%;
+}
+
+#setinha{
+    background: #01939F;
+    display: flex;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#iconeMapa{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+#ezoffice{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sidebar{
+    background-color: #ffffff;
+    grid-area: sidebar;
+    box-shadow: 3px 4px 45px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 2;
+}
+
+.navbar{
+    background-color: #ffffff;
+    grid-area: navbar;
+    position: relative;
+    z-index: 1;
+    /* text-align: center; */
+
+}
 .containerHome{
     display: grid;
     height: 100%;
@@ -23,41 +138,42 @@ html, body{
                         "sidebar devices devices devices devices";
     color: rgb(0, 0, 0);
     text-align: center;
+    background-color: #efefef;
 }
 
 #navBar{
-    background-color: #01939F;
-    grid-area: sidebar;
+    background-color: white;
+    grid-area: navbar;
 }
 
 #sideBar{
-    background-color: #01939F;
-    grid-area: navbar;
+    background-color: white;
+    grid-area: sidebar;
 }
 
 #titleMap{
     border-top-left-radius: 15px;
     margin: 20px 0px 0px 15px;
-    background-color: #efefef;
+    background-color: white;
     grid-area: titleMap;
 }
 
 #buttonObj{
     margin: 20px 0px 0px 0px;
-    background-color: #efefef;
+    background-color: white;
     grid-area: buttonObj;
 }
 
 #search{
     border-top-right-radius: 15px;
     margin: 20px 15px 0px 0px;
-    background-color: #efefef;
+    background-color: white;
     grid-area: search;
 }
 
 #map{
     margin: 0px 15px 0px 15px;
-    background-color: #efefef;
+    background-color: white;
     grid-area: map;
 }
 
@@ -66,7 +182,7 @@ html, body{
     border-bottom-right-radius: 15px;
     border: 10px;
     margin: 0px 15px 15px 15px;
-    background-color: #efefef;
+    background-color: white;
     grid-area: devices;
 }
 
@@ -885,16 +1001,10 @@ html, body{
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
 .buttonsTopList {
     margin: 0;
     border: none;
+    background-color: transparent;
 }
 
 /*
