@@ -60,19 +60,22 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 - <b>src</b>: aqui esta toda a parte de código presente no projeto
 
-
-## 💻 Execução dos projetos
-
-
-
 ## 🗃 Histórico de lançamentos
 
-* 0.0.1 - 21/10/2022
-    * Entendimento do negócio
-    * Entendiemnto da experiência do usuário
-    * Arquitetura da solução (versão 1)
-
-
+* 1.0.0 - 21/10/2022
+    * Entrega da Sprint 1
+ 
+* 2.0.0 - 04/11/2022
+   * Entrega da Sprint 2
+  
+* 3.0.0 - 21/11/2022
+   * Entrega da sprint 3
+  
+* 4.0.0 - 04/12/2022
+   * Entrega da Sprint 4
+   
+* 5.0.0 - 15/12/2022
+   * Entrega da Sprint 5
 
 ## 📋 Licença/License
 
