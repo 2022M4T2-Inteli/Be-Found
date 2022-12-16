@@ -8,7 +8,7 @@ var activeFilter = false;
 const getDevices = () => {
     $.ajax({
         async: true,
-        url: "/wifi/",
+        url: "http://127.0.0.1:5500/wifi/",
         type: 'GET',
         success: data => {
             data.forEach(element => {
