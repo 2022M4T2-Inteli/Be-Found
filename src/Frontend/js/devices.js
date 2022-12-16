@@ -72,7 +72,7 @@ window.onclick = function(event) {
     modal2.style.display = "none";
   }
 }
-
+var oij = 0;
 function detailRoom(nameRoom, model){
   const divv = document.createElement("div");
   divv.classList.add('devices');
@@ -96,7 +96,8 @@ function detailRoom(nameRoom, model){
             </div>
             `
             tittleModal2.innerHTML= `Listagem da ${nameRoom}`
-            
+            console.log(oij);
+            oij += 1;
             geralatv2.appendChild(divv);
             modal2.style.display = "block"
             
