@@ -1,3 +1,4 @@
+//Importações
 #include "WiFi.h"
 #include "HTTPClient.h"
 #include <iostream>
@@ -7,21 +8,29 @@
 #include <WiFiMulti.h>
 
 #define NAMEDEV "DSK002"
+// wifi multi lib for multiple wifi connections
 WiFiMulti wifiMulti;
 
 const uint32_t connectTimeoutMs = 10000;
+
+//buzzer pin
 const int buz = 16;
+
+// /endpoint
 const char * endp = "teste";
+
+//Global variables
 int aux = 0;
 String loc = "";
 String locA = "";
 String locL = "";
+
+// wifi SSID & password
 const char* wifi_network_ssid     = "Inteli-COLLEGE";
 const char* wifi_network_password = "QazWsx@123";
-// const char* wifi_network_ssid     = "SHARE-RESIDENTE";
-// const char* wifi_network_password = "Share@residente";
 
 
+// function to setup wifi mode and possible connections
 void first(){
   // Define o wifi no Station Mode, ou seja, ele ira se conectar a uma rede que já existe
   WiFi.mode(WIFI_STA);
@@ -30,7 +39,7 @@ void first(){
   wifiMulti.addAP("Sala 73");
   wifiMulti.addAP("Sala 83");
 }
-
+// Req - PATCH Method - Update current location
 int patchRequestLoc(String loc){
   WiFi.begin(wifi_network_ssid, wifi_network_password);
   while(WiFi.status() != WL_CONNECTED){
@@ -58,7 +67,7 @@ int patchRequestLoc(String loc){
       return -1;
   }
 }
-
+// Req - PATCH Method - Update previous location
 int patchRequestLocA(String locA){
   WiFi.begin(wifi_network_ssid, wifi_network_password);
   while(WiFi.status() != WL_CONNECTED){
@@ -87,6 +96,7 @@ int patchRequestLocA(String locA){
   }
 }
 
+// Req - PATCH Method - Update buzzer state
 int patchRequest(){
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
@@ -110,6 +120,7 @@ int patchRequest(){
   }
 }
 
+// Req - PATCH Method - Update perimeter state
 int patchPerimetro(){
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
@@ -134,6 +145,7 @@ int patchPerimetro(){
 }
 
 
+// Req - GET Method - Check buzzer state
 void getRequest(){
   // WiFi.begin(wifi_network_ssid, wifi_network_password);
   // while(WiFi.status() != WL_CONNECTED){
@@ -161,12 +173,12 @@ void getRequest(){
   }
 }
 
-
+// Setup function
 void setup() {
   Serial.begin(115200);
   pinMode(buz,OUTPUT);
 }
-
+// Loop function
 void loop() {
   first();
   
@@ -178,7 +190,7 @@ void loop() {
   else {
     Serial.println("WiFi não conectado!");
   }
-
+  //loc recieves the ssid from the wifi connected and call patch function
   loc = WiFi.SSID();
   if(loc != locL && locL != ""){
     locA = locL;
@@ -189,6 +201,7 @@ void loop() {
     patchPerimetro();
   }
   delay(500);
+  //Wifi disconnect to to cycle the process of connection
   WiFi.disconnect();
   delay(500);
   patchRequestLoc(loc);
