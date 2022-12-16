@@ -37,11 +37,13 @@ Dentre os objetivos específicos estão:
 
 ## 📁 Estrutura de pastas
 
-
+|--> Controllers<br>
 |--> Documentos<br>
   &emsp;|--> Versões anteriores<br>
     &emsp;&emsp;|--> Apresentações<br>
     &emsp;&emsp;|--> Documentação<br>
+|--> Models<br>
+|--> Routes<br>
 |--> src<br>
   &emsp;|--> Back-end<br>
   &emsp;|--> Circuito<br>
