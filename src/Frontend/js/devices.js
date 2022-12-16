@@ -80,7 +80,7 @@ function detailRoom(nameRoom, model){
   geralatv.innerHTML = "";
   $.ajax({
     async: true,
-    url: `/room/${id}`,
+    url: `/rfid/find`,
     type: 'GET',
     success: data => {
         data.forEach(element => {
