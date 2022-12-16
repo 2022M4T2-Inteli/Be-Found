@@ -72,19 +72,20 @@ window.onclick = function(event) {
     modal2.style.display = "none";
   }
 }
-
+var oij = 0;
 function detailRoom(nameRoom, model){
+    modal2.style.display = "block"
   const divv = document.createElement("div");
   divv.classList.add('devices');
   divv.innerHTML = "";
   geralatv.innerHTML = "";
   $.ajax({
     async: true,
-    url: `/room/${id}`,
+    url: `/rfid/find`,
     type: 'GET',
     success: data => {
         data.forEach(element => {
-          divv.innerHTML = `
+            divv.innerHTML = `
             <div class="textDevices">
                 <div>
                     <span class="tittleRoom"><p><b>${element.modelo}</b></p></span>
@@ -96,12 +97,7 @@ function detailRoom(nameRoom, model){
             </div>
             `
             tittleModal2.innerHTML= `Listagem da ${nameRoom}`
-            var tsts = `${element.salaatt}`;
-            if(tsts == nameRoom){
-              geralatv2.appendChild(divv);
-              modal2.style.display = "block"
-            }
-            
+            geralatv2.appendChild(divv);
             ;
         });
     }

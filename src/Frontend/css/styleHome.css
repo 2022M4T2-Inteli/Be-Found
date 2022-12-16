@@ -126,12 +126,17 @@ nav div{
     /* text-align: center; */
 
 }
+
+.nav-link{
+    margin: auto;
+}
+
 .containerHome{
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 75px 75px 200px 200px 200px 75px;
+    grid-template-columns: 0.4fr 1.2fr 1fr 1fr 1fr;
+    grid-template-rows: 75px 30px 80px 95px 1.0fr 1.0fr;
     grid-template-areas: 
                         "sidebar navbar navbar navbar navbar"
                         "sidebar titleMap titleMap buttonObj search"
@@ -916,23 +921,23 @@ nav div{
 }
 
 .corRosa{
-    background-color: #FF548F;
+    background-color: #e36612;
 }
 
 .corVerde{
-    background-color: #19B69B;
+    background-color: #cc3262;
 }
 
 .corRoxo{
-    background-color: #9061C2;
+    background-color: #5ba221;
 }
 
 .corAzulEscuro{
-    background-color: #02779E;
+    background-color: #7030a0;
 }
 
 .corAzulClaro{
-    background-color: #63D3FF;
+    background-color: #0050c9;
 }
 
 
