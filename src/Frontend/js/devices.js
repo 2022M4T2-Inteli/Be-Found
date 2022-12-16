@@ -74,6 +74,7 @@ window.onclick = function(event) {
 }
 var oij = 0;
 function detailRoom(nameRoom, model){
+    modal2.style.display = "block"
   const divv = document.createElement("div");
   divv.classList.add('devices');
   divv.innerHTML = "";
@@ -84,7 +85,6 @@ function detailRoom(nameRoom, model){
     type: 'GET',
     success: data => {
         data.forEach(element => {
-            divv.innerHTML = "";
             divv.innerHTML = `
             <div class="textDevices">
                 <div>
@@ -97,11 +97,7 @@ function detailRoom(nameRoom, model){
             </div>
             `
             tittleModal2.innerHTML= `Listagem da ${nameRoom}`
-            console.log(oij);
-            oij += 1;
             geralatv2.appendChild(divv);
-            modal2.style.display = "block"
-            
             ;
         });
     }
