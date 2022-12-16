@@ -84,7 +84,8 @@ function detailRoom(nameRoom, model){
     type: 'GET',
     success: data => {
         data.forEach(element => {
-          divv.innerHTML = `
+            divv.innerHTML = "";
+            divv.innerHTML = `
             <div class="textDevices">
                 <div>
                     <span class="tittleRoom"><p><b>${element.modelo}</b></p></span>
