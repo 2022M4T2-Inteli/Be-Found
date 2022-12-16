@@ -96,11 +96,9 @@ function detailRoom(nameRoom, model){
             </div>
             `
             tittleModal2.innerHTML= `Listagem da ${nameRoom}`
-            var tsts = `${element.salaatt}`;
-            if(tsts == nameRoom){
-              geralatv2.appendChild(divv);
-              modal2.style.display = "block"
-            }
+            
+            geralatv2.appendChild(divv);
+            modal2.style.display = "block"
             
             ;
         });
