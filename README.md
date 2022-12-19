@@ -1,18 +1,17 @@
-# Projeto5
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Prototipação em IoT
+# Prototipação IoT
 
 ## Be Found
 
 ## Integrantes: 
 - <a href="https://www.linkedin.com/in/ana-clara-loureiro-muller-zaidan/">Ana Clara Loureiro Müller Zaidan</a>
 - <a href="https://www.linkedin.com/in/bruno-meira-75419918b/">Bruno Otavio Bezerra de Meira</a> 
-- <a href="">João Pedro Sartori Garcia de Alcaraz</a>
+- <a href="#">João Pedro Sartori Garcia de Alcaraz</a>
 - <a href="https://www.linkedin.com/in/lucas-britto-376665208/">Lucas de Britto Vieira</a>
 - <a href="https://www.linkedin.com/in/michel-mansur-26006a219/">Michel Mansur</a>
 - <a href="https://www.linkedin.com/in/vit%C3%B3ria-rodrigues-de-oliveira-bb955921b/">Vitória Rodrigues de Oliveira</a> 
@@ -34,32 +33,35 @@ Dentre os objetivos específicos estão:
 - Permitir melhor controle dos ativos;
 - Visualizar os equipamentos que saírem do perímetro escolar.
 
-
 ## 📁 Estrutura de pastas
 
-|--> Controllers<br>
-|--> Documentos<br>
-  &emsp;|--> Versões anteriores<br>
-    &emsp;&emsp;|--> Apresentações<br>
-    &emsp;&emsp;|--> Documentação<br>
-|--> Models<br>
-|--> Routes<br>
+
+|--> documentos<br>
+  &emsp;| --> outros <br>
+  &emsp;| T2_G5_V5_IoT_Document.pdf<br>
+  &emsp;| T2_G5_V5_IoT_Document.docx<br>
+  &emsp;| T2_G5_V5_Instruction_Manual.pdf<br>
 |--> src<br>
-  &emsp;|--> Back-end<br>
+  &emsp;|--> Backend<br>
   &emsp;|--> Circuito<br>
-  &emsp;|--> Front-end<br>
+  &emsp;|--> Frontend<br>
 | readme.md<br>
 
-
-Dentre os arquivos presentes na raiz do projeto, definem-se:
+Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 - <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-- <b>Documentação</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>Versões anteriores</b> onde estão presentes as antigas versões das apresentações e do documento final.
+- <b>documentos</b>: aqui estão todos os documentos do projeto, incluindo o manual de instruções. Há também uma pasta denominada <b>outros</b> onde estão presentes outros documentos complementares.
 
-- <b>src</b>: aqui esta toda a parte de código presente no projeto
+- <b>src</b>: todo o código fonte criado para o desenvolvimento do projeto, incluindo os blocos de código do circuito, backend e frontend se aplicáveis.
 
-- <b>Os arquivos ".gitignore", "app.js", "package-lock.json" e "package.json são referentes ao back-end do projeto, e estão na pasta raiz, visto que isso é essencial para o funcionamento do deploy na Web."</b>
+## 💻 Execução do projeto
+
+Um guia para a execução desse projeto pode ser encontrado no conteúdo do documento "Manual de Instruções", dentro da pasta "documentos".
+
+Se preferir, também é possível acessá-lo a partir do seguinte link:
+
+https://github.com/2022M4T2-Inteli/Be-Found/blob/main/documentos/T2_G5_V5_Instruction_Manual.pdf
 
 ## 🗃 Histórico de lançamentos
 
@@ -80,4 +82,4 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">Prototipação em IoT</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, <a href="">Ana Clara Loureiro Müller Zaidan</a>, <a href="">Bruno Otavio Bezerra de Meira</a>, <a href="">João Pedro Sartori Garcia de Alcaraz</a>, <a href="">Lucas de Britto Vieira</a>, <a href="">Michel Mansur</a>, <a href="">Vitória Rodrigues de Oliveira </a> </a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="#">BeeFound</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, <a href="#">Ana Clara Loureiro Müller Zaidan</a>, <a href="#">Bruno Otavio Bezerra de Meira</a>, <a href="#">João Pedro Sartori Garcia de Alcaraz</a>, <a href="#">Lucas de Britto Vieira</a>, <a href="#">Michel Mansur</a>, <a href="#">Vitória Rodrigues de Oliveira </a> </a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
