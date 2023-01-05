@@ -11,7 +11,7 @@
 ## Integrantes: 
 - <a href="https://www.linkedin.com/in/ana-clara-loureiro-muller-zaidan/">Ana Clara Loureiro Müller Zaidan</a>
 - <a href="https://www.linkedin.com/in/bruno-meira-75419918b/">Bruno Otavio Bezerra de Meira</a> 
-- <a href="#">João Pedro Sartori Garcia de Alcaraz</a>
+- <a href="https://www.linkedin.com/in/joao-alcaraz-b36858231">João Pedro Sartori Garcia de Alcaraz</a>
 - <a href="https://www.linkedin.com/in/lucas-britto-376665208/">Lucas de Britto Vieira</a>
 - <a href="https://www.linkedin.com/in/michel-mansur-26006a219/">Michel Mansur</a>
 - <a href="https://www.linkedin.com/in/vit%C3%B3ria-rodrigues-de-oliveira-bb955921b/">Vitória Rodrigues de Oliveira</a> 
